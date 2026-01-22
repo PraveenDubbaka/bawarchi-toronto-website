@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Utensils, Clock, Award, Heart } from 'lucide-react';
 
 const CookingAnimation = () => {
   const { scrollYProgress } = useScroll();

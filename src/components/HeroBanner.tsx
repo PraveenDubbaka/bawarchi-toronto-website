@@ -23,7 +23,6 @@ const HeroBanner = () => {
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
-  const rotate = useTransform(scrollY, [0, 500], [0, 5]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

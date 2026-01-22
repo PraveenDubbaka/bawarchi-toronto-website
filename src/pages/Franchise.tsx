@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Store, TrendingUp, Users, DollarSign, Award, CheckCircle, Mail, Phone, Send, User, Building2, MapPin, Briefcase } from 'lucide-react';
+import { Store, TrendingUp, Users, DollarSign, Award, CheckCircle, Mail, Phone, Send } from 'lucide-react';
 import { useState } from 'react';
 
 const Franchise = () => {
