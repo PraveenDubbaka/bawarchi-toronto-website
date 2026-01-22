@@ -9,7 +9,7 @@ const HeroBanner = () => {
   const heroSlides = [
     { type: 'image', url: `${import.meta.env.BASE_URL}images/spices-hero.jpg`, title: 'Authentic', subtitle: 'Spices & Flavors' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-biryani.jpg`, title: 'Royal', subtitle: 'Hyderabadi Biryani' },
-    { type: 'video', url: `${import.meta.env.BASE_URL}videos/indian-food-hero.mp4`, title: 'Experience', subtitle: 'The Art of Biryani' },
+    { type: 'video', url: `${import.meta.env.BASE_URL}videos/tandoor.mp4`, title: 'Experience', subtitle: 'The Art of Tandoor' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-thali.jpg`, title: 'Traditional', subtitle: 'Indian Thali' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-curry.jpg`, title: 'Aromatic', subtitle: 'Butter Chicken' },
   ];
