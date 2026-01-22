@@ -9,7 +9,7 @@ const HeroBanner = () => {
   const heroSlides = [
     { type: 'image', url: `${import.meta.env.BASE_URL}images/spices-hero.jpg`, title: 'Authentic', subtitle: 'Spices & Flavors' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-biryani.jpg`, title: 'Royal', subtitle: 'Hyderabadi Biryani' },
-    { type: 'video', url: `${import.meta.env.BASE_URL}videos/tandoor.mp4`, title: 'Experience', subtitle: 'The Art of Tandoor' },
+    { type: 'video', url: `${import.meta.env.BASE_URL}videos/tandoor.mp4`, poster: `${import.meta.env.BASE_URL}images/tandoori.jpg`, title: 'Experience', subtitle: 'The Art of Tandoor' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-thali.jpg`, title: 'Traditional', subtitle: 'Indian Thali' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-curry.jpg`, title: 'Aromatic', subtitle: 'Butter Chicken' },
   ];
@@ -42,12 +42,20 @@ const HeroBanner = () => {
           >
             {heroSlides[currentSlide].type === 'video' ? (
               <video
+                key={heroSlides[currentSlide].url}
                 src={heroSlides[currentSlide].url}
+                poster={heroSlides[currentSlide].poster}
                 className="w-full h-full object-cover"
                 autoPlay
                 muted
                 loop
                 playsInline
+                preload="auto"
+                onError={(e) => {
+                  console.error('Video failed to load:', e);
+                  // Fallback to next slide on error
+                  setTimeout(() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length), 1000);
+                }}
               />
             ) : (
               <motion.img 
