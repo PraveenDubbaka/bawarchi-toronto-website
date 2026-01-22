@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/bawarchi-toronto-website",
+  "homepage": "https://PraveenDubbaka.github.io/bawarchi-toronto-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
