@@ -7,10 +7,10 @@ const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroImages = [
-    { url: '/images/spices-hero.jpg', title: 'Authentic', subtitle: 'Spices & Flavors' },
-    { url: '/images/hero-biryani.jpg', title: 'Royal', subtitle: 'Hyderabadi Biryani' },
-    { url: '/images/hero-thali.jpg', title: 'Traditional', subtitle: 'Indian Thali' },
-    { url: '/images/hero-curry.jpg', title: 'Aromatic', subtitle: 'Butter Chicken' },
+    { url: `${import.meta.env.BASE_URL}images/spices-hero.jpg`, title: 'Authentic', subtitle: 'Spices & Flavors' },
+    { url: `${import.meta.env.BASE_URL}images/hero-biryani.jpg`, title: 'Royal', subtitle: 'Hyderabadi Biryani' },
+    { url: `${import.meta.env.BASE_URL}images/hero-thali.jpg`, title: 'Traditional', subtitle: 'Indian Thali' },
+    { url: `${import.meta.env.BASE_URL}images/hero-curry.jpg`, title: 'Aromatic', subtitle: 'Butter Chicken' },
   ];
 
   useEffect(() => {

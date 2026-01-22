@@ -9,7 +9,7 @@ const Promotions = () => {
       description: 'Order any biryani and get another one of equal or lesser value absolutely free! Valid for dine-in and takeout.',
       validUntil: 'Valid until March 31, 2026',
       code: 'BOGO2026',
-      image: '/images/biryani.jpg',
+      image: `${import.meta.env.BASE_URL}images/biryani.jpg`,
       badge: 'Most Popular',
       discount: '50% OFF'
     },
@@ -19,7 +19,7 @@ const Promotions = () => {
       description: 'Enjoy 20% off on all family meal combos every Saturday and Sunday. Perfect for family gatherings!',
       validUntil: 'Every Weekend',
       code: 'WEEKEND20',
-      image: '/images/hero-thali.jpg',
+      image: `${import.meta.env.BASE_URL}images/hero-thali.jpg`,
       badge: 'Weekend Only',
       discount: '20% OFF'
     },
@@ -29,7 +29,7 @@ const Promotions = () => {
       description: 'Get a complete lunch combo with rice, curry, naan, and drink for just $12.99. Available Monday to Friday.',
       validUntil: 'Mon-Fri, 11AM-3PM',
       code: 'LUNCH99',
-      image: '/images/butter-chicken.jpg',
+      image: `${import.meta.env.BASE_URL}images/butter-chicken.jpg`,
       badge: 'Limited Time',
       discount: '$12.99'
     },
@@ -39,7 +39,7 @@ const Promotions = () => {
       description: 'Students get 15% off on all menu items. Just show your valid student ID at checkout.',
       validUntil: 'Year Round',
       code: 'STUDENT15',
-      image: '/images/paneer-tikka.jpg',
+      image: `${import.meta.env.BASE_URL}images/paneer-tikka.jpg`,
       badge: 'Student Special',
       discount: '15% OFF'
     }

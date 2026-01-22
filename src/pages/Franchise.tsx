@@ -116,7 +116,7 @@ const Franchise = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/images/hero-biryani.jpg" 
+            src={`${import.meta.env.BASE_URL}images/hero-biryani.jpg`}
             alt="Franchise Opportunity" 
             className="w-full h-full object-cover opacity-30"
           />
@@ -291,7 +291,7 @@ const Franchise = () => {
               className="relative"
             >
               <img 
-                src="/images/hero-thali.jpg" 
+                src={`${import.meta.env.BASE_URL}images/hero-thali.jpg`}
                 alt="Restaurant Interior" 
                 className="rounded-2xl shadow-2xl"
               />

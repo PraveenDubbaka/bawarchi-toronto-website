@@ -37,7 +37,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <motion.img
-              src="/images/bawarchi-logo.png"
+              src={`${import.meta.env.BASE_URL}images/bawarchi-logo.png`}
               alt="Bawarchi Logo"
               whileHover={{ scale: 1.05 }}
               className="h-12 md:h-16 w-auto"

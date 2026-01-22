@@ -18,7 +18,7 @@ const Footer = () => {
           >
             <div className="flex items-center space-x-3">
               <img 
-                src="/images/bawarchi-logo.png" 
+                src={`${import.meta.env.BASE_URL}images/bawarchi-logo.png`}
                 alt="Bawarchi Logo" 
                 className="h-16 w-auto"
               />

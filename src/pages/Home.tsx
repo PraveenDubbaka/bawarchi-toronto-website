@@ -38,25 +38,25 @@ const Home = () => {
       name: 'Hyderabadi Biryani',
       description: 'Aromatic basmati rice with tender meat and exotic spices',
       category: 'Signature',
-      image: '/images/biryani.jpg'
+      image: `${import.meta.env.BASE_URL}images/biryani.jpg`
     },
     {
       name: 'Paneer Tikka',
       description: 'Grilled cottage cheese with bell peppers and onions',
       category: 'Vegetarian',
-      image: '/images/paneer-tikka.jpg'
+      image: `${import.meta.env.BASE_URL}images/paneer-tikka.jpg`
     },
     {
       name: 'Butter Chicken',
       description: 'Creamy tomato-based curry with tender chicken pieces',
       category: 'Chef Special',
-      image: '/images/butter-chicken.jpg'
+      image: `${import.meta.env.BASE_URL}images/butter-chicken.jpg`
     },
     {
       name: 'Tandoori Platter',
       description: 'Assorted grilled specialties from our clay oven',
       category: 'Popular',
-      image: '/images/tandoori.jpg'
+      image: `${import.meta.env.BASE_URL}images/tandoori.jpg`
     }
   ];
 
