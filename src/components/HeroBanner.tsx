@@ -9,7 +9,6 @@ const HeroBanner = () => {
   const heroSlides = [
     { type: 'image', url: `${import.meta.env.BASE_URL}images/spices-hero.jpg`, title: 'Authentic', subtitle: 'Spices & Flavors' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-biryani.jpg`, title: 'Royal', subtitle: 'Hyderabadi Biryani' },
-    { type: 'video', url: `${import.meta.env.BASE_URL}videos/tandoor.mp4`, poster: `${import.meta.env.BASE_URL}images/tandoori.jpg`, title: 'Experience', subtitle: 'The Art of Tandoor' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-thali.jpg`, title: 'Traditional', subtitle: 'Indian Thali' },
     { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-curry.jpg`, title: 'Aromatic', subtitle: 'Butter Chicken' },
   ];
@@ -29,7 +28,7 @@ const HeroBanner = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background with Slider */}
       <div className="absolute inset-0 z-0">
-        {/* Hero Slider with Images and Videos */}
+        {/* Hero Image Slider with Parallax */}
         <AnimatePresence mode="wait">
           <motion.div 
             key={currentSlide}
@@ -40,31 +39,12 @@ const HeroBanner = () => {
             transition={{ duration: 1.5, ease: "easeInOut" }}
             style={{ y }}
           >
-            {heroSlides[currentSlide].type === 'video' ? (
-              <video
-                key={heroSlides[currentSlide].url}
-                src={heroSlides[currentSlide].url}
-                poster={heroSlides[currentSlide].poster}
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                onError={(e) => {
-                  console.error('Video failed to load:', e);
-                  // Fallback to next slide on error
-                  setTimeout(() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length), 1000);
-                }}
-              />
-            ) : (
-              <motion.img 
-                src={heroSlides[currentSlide].url}
-                alt={heroSlides[currentSlide].title}
-                className="w-full h-full object-cover"
-                style={{ scale: useTransform(scrollY, [0, 500], [1, 1.2]) }}
-              />
-            )}
+            <motion.img 
+              src={heroSlides[currentSlide].url}
+              alt={heroSlides[currentSlide].title}
+              className="w-full h-full object-cover"
+              style={{ scale: useTransform(scrollY, [0, 500], [1, 1.2]) }}
+            />
             <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/60"></div>
           </motion.div>
         </AnimatePresence>
