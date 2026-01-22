@@ -6,16 +6,17 @@ const HeroBanner = () => {
   const { scrollY } = useScroll();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const heroImages = [
-    { url: `${import.meta.env.BASE_URL}images/spices-hero.jpg`, title: 'Authentic', subtitle: 'Spices & Flavors' },
-    { url: `${import.meta.env.BASE_URL}images/hero-biryani.jpg`, title: 'Royal', subtitle: 'Hyderabadi Biryani' },
-    { url: `${import.meta.env.BASE_URL}images/hero-thali.jpg`, title: 'Traditional', subtitle: 'Indian Thali' },
-    { url: `${import.meta.env.BASE_URL}images/hero-curry.jpg`, title: 'Aromatic', subtitle: 'Butter Chicken' },
+  const heroSlides = [
+    { type: 'image', url: `${import.meta.env.BASE_URL}images/spices-hero.jpg`, title: 'Authentic', subtitle: 'Spices & Flavors' },
+    { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-biryani.jpg`, title: 'Royal', subtitle: 'Hyderabadi Biryani' },
+    { type: 'video', url: `${import.meta.env.BASE_URL}videos/indian-food-hero.mp4`, title: 'Experience', subtitle: 'The Art of Biryani' },
+    { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-thali.jpg`, title: 'Traditional', subtitle: 'Indian Thali' },
+    { type: 'image', url: `${import.meta.env.BASE_URL}images/hero-curry.jpg`, title: 'Aromatic', subtitle: 'Butter Chicken' },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -28,7 +29,7 @@ const HeroBanner = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background with Slider */}
       <div className="absolute inset-0 z-0">
-        {/* Hero Image Slider with Parallax */}
+        {/* Hero Slider with Images and Videos */}
         <AnimatePresence mode="wait">
           <motion.div 
             key={currentSlide}
@@ -39,19 +40,30 @@ const HeroBanner = () => {
             transition={{ duration: 1.5, ease: "easeInOut" }}
             style={{ y }}
           >
-            <motion.img 
-              src={heroImages[currentSlide].url}
-              alt={heroImages[currentSlide].title}
-              className="w-full h-full object-cover"
-              style={{ scale: useTransform(scrollY, [0, 500], [1, 1.2]) }}
-            />
+            {heroSlides[currentSlide].type === 'video' ? (
+              <video
+                src={heroSlides[currentSlide].url}
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <motion.img 
+                src={heroSlides[currentSlide].url}
+                alt={heroSlides[currentSlide].title}
+                className="w-full h-full object-cover"
+                style={{ scale: useTransform(scrollY, [0, 500], [1, 1.2]) }}
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/60"></div>
           </motion.div>
         </AnimatePresence>
 
         {/* Slider Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
-          {heroImages.map((_, index) => (
+          {heroSlides.map((slide, index) => (
             <motion.button
               key={index}
               onClick={() => setCurrentSlide(index)}
@@ -60,6 +72,7 @@ const HeroBanner = () => {
               }`}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
+              aria-label={`Go to slide ${index + 1}: ${slide.title}`}
             />
           ))}
         </div>
