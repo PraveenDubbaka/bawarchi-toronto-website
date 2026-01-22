@@ -196,7 +196,7 @@ const HeroBanner = () => {
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
         >
           <motion.a
-            href="https://order.online/store/bawarchi-indian-cuisine-toronto-875967/?hideModal=true&pickup=true"
+            href="https://order.toasttab.com/online/bawarchi-biryani-scarborough-1949-kennedy-road"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: "0 20px 50px rgba(251, 146, 60, 0.4)" }}

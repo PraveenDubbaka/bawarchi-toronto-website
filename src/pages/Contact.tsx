@@ -110,7 +110,7 @@ const Contact = () => {
               {/* Quick Actions */}
               <div className="space-y-4">
                 <a
-                  href="https://order.online/store/bawarchi-indian-cuisine-toronto-875967/?hideModal=true&pickup=true"
+                  href="https://order.toasttab.com/online/bawarchi-biryani-scarborough-1949-kennedy-road"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full font-bold text-lg text-center hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300"

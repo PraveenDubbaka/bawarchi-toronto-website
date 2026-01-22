@@ -117,7 +117,7 @@ const Menu = () => {
               Order now and enjoy authentic Indian cuisine at home
             </p>
             <a
-              href="https://order.online/store/bawarchi-indian-cuisine-toronto-875967/?hideModal=true&pickup=true"
+              href="https://order.toasttab.com/online/bawarchi-biryani-scarborough-1949-kennedy-road"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300"
