@@ -174,9 +174,9 @@ const Home = () => {
                   scale: 1.03,
                   transition: { duration: 0.2 }
                 }}
-                className="relative group"
+                className="relative group h-full"
               >
-                <div className="glass-morphism p-6 rounded-xl border border-white/10 hover:border-primary-500/50 transition-all duration-300 relative overflow-hidden">
+                <div className="glass-morphism p-6 rounded-xl border border-white/10 hover:border-primary-500/50 transition-all duration-300 relative overflow-hidden h-full flex flex-col">
                   {/* Animated Gradient Background on Hover */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -190,7 +190,7 @@ const Home = () => {
                     }}
                   />
                   
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-start justify-between mb-3">
                       <motion.div
                         whileHover={{ scale: 1.2, rotate: 360 }}
@@ -212,7 +212,7 @@ const Home = () => {
                     <h3 className="text-xl font-bold mb-2 text-white group-hover:text-gradient transition-all duration-300">
                       {special.name}
                     </h3>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-white/60 text-sm flex-grow">
                       {special.subtitle}
                     </p>
                     
