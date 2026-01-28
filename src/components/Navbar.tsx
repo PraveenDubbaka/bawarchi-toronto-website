@@ -43,7 +43,8 @@ const Navbar = () => {
               className="h-12 md:h-16 w-auto"
             />
             <motion.span 
-              className="text-primary-400 text-xs font-semibold tracking-wide mt-1"
+              className="text-primary-400 text-xs font-semibold tracking-wide"
+              style={{ paddingLeft: '50px', marginTop: '-5px' }}
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
