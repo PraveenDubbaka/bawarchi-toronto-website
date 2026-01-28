@@ -15,7 +15,10 @@ const CookingAnimation = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black">
       <div className="absolute inset-0 opacity-20">
-        <div className="cooking-pattern absolute inset-0"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle, rgba(251, 146, 60, 0.1) 1px, transparent 1px)',
+          backgroundSize: '30px 30px',
+        }}></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4">
@@ -52,7 +55,7 @@ const CookingAnimation = () => {
                 style={{ rotate: mixRotate }}
                 className="text-6xl"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-500 to-red-600"></div>
+                🥘
               </motion.div>
             </motion.div>
           </motion.div>
@@ -60,31 +63,51 @@ const CookingAnimation = () => {
           {/* Falling Ingredients */}
           <motion.div
             style={{ y: ingredient1Y }}
-            className="absolute left-1/4 top-0 z-10"
+            className="absolute left-1/4 top-0 text-5xl z-10"
           >
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-orange-500 shadow-lg"></div>
+            <motion.div
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            >
+              🌶️
+            </motion.div>
           </motion.div>
 
           <motion.div
             style={{ y: ingredient2Y }}
-            className="absolute right-1/4 top-0 z-10"
+            className="absolute right-1/4 top-0 text-5xl z-10"
           >
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 shadow-lg"></div>
+            <motion.div
+              animate={{ rotate: [0, -360] }}
+              transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
+            >
+              🧄
+            </motion.div>
           </motion.div>
 
           <motion.div
             style={{ y: ingredient3Y }}
-            className="absolute left-1/3 top-10 z-10"
+            className="absolute left-1/3 top-10 text-5xl z-10"
           >
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 shadow-lg"></div>
+            <motion.div
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+            >
+              🧅
+            </motion.div>
           </motion.div>
 
           {/* Additional ingredients */}
           <motion.div
             style={{ y: useTransform(scrollYProgress, [0.16, 0.31], [100, 0]) }}
-            className="absolute right-1/3 top-10 z-10"
+            className="absolute right-1/3 top-10 text-4xl z-10"
           >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 shadow-lg"></div>
+            <motion.div
+              animate={{ rotate: [0, -360] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+            >
+              🍅
+            </motion.div>
           </motion.div>
 
           {/* Steam Effect */}
@@ -95,7 +118,7 @@ const CookingAnimation = () => {
             {[...Array(5)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute"
+                className="absolute text-4xl"
                 style={{ left: `${i * 30}px` }}
                 animate={{
                   y: [0, -100],
@@ -108,7 +131,7 @@ const CookingAnimation = () => {
                   delay: i * 0.3,
                 }}
               >
-                <div className="w-12 h-12 rounded-full bg-white/30 backdrop-blur-sm"></div>
+                💨
               </motion.div>
             ))}
           </motion.div>
@@ -122,10 +145,9 @@ const CookingAnimation = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5 }}
+              className="text-8xl"
             >
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-orange-500 via-red-500 to-amber-600 shadow-2xl flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 opacity-60"></div>
-              </div>
+              🍛
             </motion.div>
           </motion.div>
         </div>
