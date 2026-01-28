@@ -47,4 +47,9 @@
       background-position: 100% 50%;
     }
   }
+
+  .cooking-pattern {
+    background-image: radial-gradient(circle, rgba(251, 146, 60, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
 }
