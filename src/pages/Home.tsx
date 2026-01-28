@@ -64,7 +64,7 @@ const Home = () => {
     {
       name: 'Kamju Pitta',
       subtitle: 'Quail (Biryani & Tandoori)',
-      icon: '🦅'
+      icon: '🐦'
     },
     {
       name: 'Nalli Ghost Biryani',
