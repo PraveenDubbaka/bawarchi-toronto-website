@@ -27,6 +27,9 @@ const Footer = () => {
               <span className="text-gradient">Bawarchi</span>
               <span className="text-primary-400 ml-2">Toronto</span>
             </h3>
+            <p className="text-primary-400 text-sm font-semibold">
+              Scarborough, ON
+            </p>
             <p className="text-white/60 text-sm">
               #1 Indian Restaurant Chain in USA, Now Open in Canada, Toronto
             </p>
