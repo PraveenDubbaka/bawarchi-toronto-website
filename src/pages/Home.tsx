@@ -64,32 +64,32 @@ const Home = () => {
     {
       name: 'Kamju Pitta',
       subtitle: 'Quail (Biryani & Tandoori)',
-      icon: '🐦'
+      image: `${import.meta.env.BASE_URL}images/quail-biryani.jpg`
     },
     {
       name: 'Nalli Ghost Biryani',
       subtitle: 'Tender Bone Marrow Biryani',
-      icon: '🍖'
+      image: `${import.meta.env.BASE_URL}images/nalli-biryani.jpg`
     },
     {
       name: 'Pomfret (Fish)',
       subtitle: 'Tandoori or Panfry',
-      icon: '🐟'
+      image: `${import.meta.env.BASE_URL}images/fish-fry.jpg`
     },
     {
       name: 'Chicken/Mutton Chukka',
       subtitle: 'Spicy Dry Roast',
-      icon: '🌶️'
+      image: `${import.meta.env.BASE_URL}images/chicken-chukka.jpg`
     },
     {
       name: 'Mutton/Chicken Ghee Roast Biryani',
       subtitle: 'Rich Ghee Flavored',
-      icon: '🍛'
+      image: `${import.meta.env.BASE_URL}images/ghee-roast-biryani.jpg`
     },
     {
       name: 'Paneer Ghee Roast Biryani',
       subtitle: 'Vegetarian Special',
-      icon: '🧈'
+      image: `${import.meta.env.BASE_URL}images/paneer-biryani.jpg`
     }
   ];
 
@@ -176,7 +176,30 @@ const Home = () => {
                 }}
                 className="relative group h-full"
               >
-                <div className="glass-morphism p-6 rounded-xl border border-white/10 hover:border-primary-500/50 transition-all duration-300 relative overflow-hidden h-full flex flex-col">
+                <div className="glass-morphism rounded-xl border border-white/10 hover:border-primary-500/50 transition-all duration-300 relative overflow-hidden h-full flex flex-col">
+                  {/* Image Section */}
+                  <div className="relative h-48 overflow-hidden">
+                    <motion.img
+                      src={special.image}
+                      alt={special.name}
+                      className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.6 }}
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    
+                    {/* TODAY Badge */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: index * 0.1 + 0.3 }}
+                      className="absolute top-3 right-3 bg-gradient-to-r from-primary-500 to-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"
+                    >
+                      TODAY
+                    </motion.div>
+                  </div>
+
                   {/* Animated Gradient Background on Hover */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -190,29 +213,12 @@ const Home = () => {
                     }}
                   />
                   
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex items-start justify-between mb-3">
-                      <motion.div
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-4xl"
-                      >
-                        {special.icon}
-                      </motion.div>
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: index * 0.1 + 0.3 }}
-                        className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full"
-                      >
-                        TODAY
-                      </motion.div>
-                    </div>
-                    
+                  {/* Content Section */}
+                  <div className="relative z-10 flex flex-col flex-grow p-6">
                     <h3 className="text-xl font-bold mb-2 text-white group-hover:text-gradient transition-all duration-300">
                       {special.name}
                     </h3>
-                    <p className="text-white/60 text-sm flex-grow">
+                    <p className="text-white/60 text-sm flex-grow mb-4">
                       {special.subtitle}
                     </p>
                     
@@ -220,7 +226,7 @@ const Home = () => {
                       initial={{ width: 0 }}
                       whileInView={{ width: '100%' }}
                       transition={{ delay: index * 0.1 + 0.5, duration: 0.6 }}
-                      className="h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 mt-4 rounded-full"
+                      className="h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full"
                     />
                   </div>
                 </div>
