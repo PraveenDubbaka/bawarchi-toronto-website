@@ -62,7 +62,7 @@ const Home = () => {
 
   const everydaySpecials = [
     {
-      name: 'Karnju Ritta',
+      name: 'Kamju Pitta',
       subtitle: 'Quail (Biryani & Tandoori)',
       icon: '🦅'
     },
