@@ -60,9 +60,206 @@ const Home = () => {
     }
   ];
 
+  const everydaySpecials = [
+    {
+      name: 'Karnju Ritta',
+      subtitle: 'Quail (Biryani & Tandoori)',
+      icon: '🦅'
+    },
+    {
+      name: 'Nalli Ghost Biryani',
+      subtitle: 'Tender Bone Marrow Biryani',
+      icon: '🍖'
+    },
+    {
+      name: 'Pomfret (Fish)',
+      subtitle: 'Tandoori or Panfry',
+      icon: '🐟'
+    },
+    {
+      name: 'Chicken/Mutton Chukka',
+      subtitle: 'Spicy Dry Roast',
+      icon: '🌶️'
+    },
+    {
+      name: 'Mutton/Chicken Ghee Roast Biryani',
+      subtitle: 'Rich Ghee Flavored',
+      icon: '🍛'
+    },
+    {
+      name: 'Paneer Ghee Roast Biryani',
+      subtitle: 'Vegetarian Special',
+      icon: '🧈'
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <HeroBanner />
+
+      {/* Everyday Specials Section */}
+      <section className="py-16 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <motion.div 
+          className="absolute top-0 left-0 w-full h-full opacity-20"
+          animate={{
+            backgroundPosition: ['0% 0%', '100% 100%'],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: 'reverse',
+          }}
+          style={{
+            backgroundImage: 'radial-gradient(circle at center, #f97316 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="inline-block mb-4"
+            >
+              <div className="flex items-center justify-center space-x-3 mb-2">
+                <motion.div
+                  animate={{ rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+                  className="text-4xl"
+                >
+                  ⭐
+                </motion.div>
+                <h2 className="text-4xl md:text-5xl font-display font-bold">
+                  <span className="text-gradient">Everyday Specials</span>
+                </h2>
+                <motion.div
+                  animate={{ rotate: [0, -10, 10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+                  className="text-4xl"
+                >
+                  ⭐
+                </motion.div>
+              </div>
+              <p className="text-primary-400 text-lg font-semibold">Fresh Daily • Limited Availability</p>
+            </motion.div>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+              Discover our handcrafted specialties, prepared fresh every day with authentic recipes
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {everydaySpecials.map((special, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  delay: index * 0.1,
+                  duration: 0.5,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  y: -8,
+                  scale: 1.03,
+                  transition: { duration: 0.2 }
+                }}
+                className="relative group"
+              >
+                <div className="glass-morphism p-6 rounded-xl border border-white/10 hover:border-primary-500/50 transition-all duration-300 relative overflow-hidden">
+                  {/* Animated Gradient Background on Hover */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    animate={{
+                      backgroundPosition: ['0% 0%', '100% 100%'],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatType: 'reverse',
+                    }}
+                  />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between mb-3">
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 360 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-4xl"
+                      >
+                        {special.icon}
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.1 + 0.3 }}
+                        className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full"
+                      >
+                        TODAY
+                      </motion.div>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold mb-2 text-white group-hover:text-gradient transition-all duration-300">
+                      {special.name}
+                    </h3>
+                    <p className="text-white/60 text-sm">
+                      {special.subtitle}
+                    </p>
+                    
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: '100%' }}
+                      transition={{ delay: index * 0.1 + 0.5, duration: 0.6 }}
+                      className="h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 mt-4 rounded-full"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8 }}
+            className="text-center mt-12"
+          >
+            <a
+              href="https://order.toasttab.com/online/bawarchi-biryani-scarborough-1949-kennedy-road"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full font-bold text-lg overflow-hidden"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-accent-500 to-primary-500"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+              <span className="relative z-10">Order Today's Specials Now</span>
+              <motion.span
+                className="relative z-10"
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                →
+              </motion.span>
+            </a>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Cooking Animation on Scroll */}
       <CookingAnimation />
