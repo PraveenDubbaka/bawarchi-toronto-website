@@ -1,6 +1,112 @@
 import { motion } from 'framer-motion';
 import { ChefHat, Flame, Leaf } from 'lucide-react';
 
+// Image mapping for menu items
+const getMenuItemImage = (itemName: string): string => {
+  const imageMap: { [key: string]: string } = {
+    // Biryanis
+    'Hyderabadi Chicken Dum Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    'Hyderabadi Goat Dum Biryani': '/images/Food Pic/biryani.jpg',
+    'Boneless Chicken Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    'Boneless Mutton Biryani': '/images/Food Pic/biryani.jpg',
+    'Gongura Chicken Dum Biryani': '/images/Food Pic/biryani.jpg',
+    'Gongura Mutton Dum Biryani': '/images/Food Pic/biryani.jpg',
+    'Chicken Ghee Roast Biryani': '/images/ghee-roast-biryani.jpg',
+    'Mutton Ghee Roast Biryani': '/images/Food Pic/biryani.jpg',
+    'Nalli Gosht Biryani': '/images/nalli-biryani.jpg',
+    'Hyderabadi Veg Dum Biryani': '/images/Food Pic/Guthi Vankaya Biryani.png',
+    'Paneer Biryani': '/images/paneer-biryani.jpg',
+    'Paneer Ghee Roast Biryani': '/images/paneer-biryani.jpg',
+    'Egg Biryani': '/images/Food Pic/biryani.jpg',
+    'Vijaywada Spl. Bnls. Biryani': '/images/Food Pic/biryani.jpg',
+    'Ulavacharu Chicken Dum Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    'Shirmp Biryani': '/images/Food Pic/biryani.jpg',
+    'Fish Biryani': '/images/Food Pic/biryani.jpg',
+    
+    // Appetizers (Veg)
+    'Vegetable Samosa {2}': '/images/Food Pic/samosa.jpg',
+    'Mix Veg Pakoda': '/images/Food Pic/pakoda.jpg',
+    'Chilli Idli': '/images/Food Pic/idli.jpg',
+    'Gobi Manchurian': '/images/Food Pic/Veg Machurian.png',
+    'Gobi 65 Dry / Wet': '/images/Food Pic/Gobi 65.png',
+    'Chilli Paneer': '/images/Food Pic/Panner Butter Masala.png',
+    'Paneer 65 Dry / Wet': '/images/Food Pic/paneer-tikka.jpg',
+    'Paneer Tikka Kabab': '/images/Food Pic/paneer-tikka.jpg',
+    'Crispy Corn': '/images/Food Pic/pakoda.jpg',
+    'Karampodi Gobi': '/images/Food Pic/Gobi 65.png',
+    
+    // Appetizers (Non-Veg)
+    'Chicken 65 Dry / Wet': '/images/Food Pic/chicken-65.jpg',
+    'Chilli Chicken': '/images/Food Pic/chicken-tikka.jpg',
+    'Chicken Manchurian': '/images/Food Pic/chicken-tikka.jpg',
+    'Chicken Majestic': '/images/Food Pic/chicken-tikka.jpg',
+    'Chicken Lollipop Dry / Wet': '/images/Food Pic/Chicken Lollipops.jpeg',
+    'Masala Chicken Lollipop': '/images/Food Pic/Masala Lollipops (Chicken).png',
+    'Pepper Chicken': '/images/Food Pic/chicken-65.jpg',
+    'Ginger Chicken': '/images/Food Pic/chicken-tikka.jpg',
+    'Karampodi Chicken': '/images/Food Pic/chicken-65.jpg',
+    'Chicken Pakoda': '/images/Food Pic/pakoda.jpg',
+    'Boneless Chicken Pakoda': '/images/Food Pic/pakoda.jpg',
+    'Chicken Tikka Kabab': '/images/Food Pic/chicken-tikka.jpg',
+    'Tangdi Kabab': '/images/Food Pic/chicken-tikka.jpg',
+    'Tandoori Chicken (Half)': '/images/Food Pic/Tandoori Chicken.jpeg',
+    'Chicken Seekh Kabab': '/images/Food Pic/tandoori-kebab.jpg',
+    'Mutton Seekh Kabab': '/images/Food Pic/tandoori-kebab.jpg',
+    'Mutton Pepper Fry': '/images/Food Pic/mutton-curry.jpg',
+    'Goat Chukka / Fry': '/images/chicken-chukka.jpg',
+    'Chicken Wings': '/images/Food Pic/chicken-tikka.jpg',
+    
+    // Curries
+    'Paneer Butter Masala': '/images/Food Pic/Panner Butter Masala.png',
+    'Butter Chicken': '/images/Food Pic/butter-chicken.jpg',
+    'Dal Makhani': '/images/Food Pic/dal-makhani.jpg',
+    
+    // Dosas
+    'Plain Dosa': '/images/Food Pic/masala-dosa.jpg',
+    'Masala Dosa': '/images/Food Pic/masala-dosa.jpg',
+    'Mysore Masala Dosa': '/images/Food Pic/masala-dosa.jpg',
+    'Paneer Tikka Dosa': '/images/Food Pic/masala-dosa.jpg',
+    'Chicken Tikka Dosa': '/images/Food Pic/masala-dosa.jpg',
+    '70 MM Dosa (Dine in Only)': '/images/Food Pic/masala-dosa.jpg',
+    'Rava Masala Dosa': '/images/Food Pic/masala-dosa.jpg',
+    'Idli {2}': '/images/Food Pic/idli.jpg',
+    'Medu Vada {2}': '/images/Food Pic/idli.jpg',
+    
+    // Indo Chinese
+    'Veg Hakka Noodles': '/images/Food Pic/Veg Schezwan Noodles.png',
+    'Chicken Hakka Noodles': '/images/Food Pic/Veg Schezwan Noodles.png',
+    'Veg Fried Rice': '/images/Food Pic/Veg Fried Rice.png',
+    'Chicken Fried Rice': '/images/Food Pic/Veg Fried Rice.png',
+    'Veg Manchurian (Wet)': '/images/Food Pic/Veg Manchurian Wet.png',
+    'Chicken Manchurian (Wet)': '/images/Food Pic/chicken-tikka.jpg',
+    
+    // Seafood
+    'Apollo Fish': '/images/fish-fry.jpg',
+    'Chilli Fish': '/images/Food Pic/fish-curry.jpg',
+    'Fish Masala': '/images/Food Pic/fish-curry.jpg',
+    'Tandoori Pomfret (Fish)': '/images/Food Pic/Tandoori Pomfret.png',
+    
+    // Breads
+    'Plain Naan': '/images/Food Pic/naan.jpg',
+    'Butter Naan': '/images/Food Pic/naan.jpg',
+    'Garlic Naan': '/images/Food Pic/Garlic Naan.png',
+    'Tandoori Roti': '/images/Food Pic/naan.jpg',
+    'Onion Kulcha': '/images/Food Pic/naan.jpg',
+    'Rice': '/images/Food Pic/rice.jpg',
+    
+    // Desserts & Beverages
+    'Gulab Jamun': '/images/Food Pic/gulab-jamun.jpg',
+    'Mango Lassi': '/images/Food Pic/lassi.jpg',
+    'Sweet Lassi': '/images/Food Pic/lassi.jpg',
+    'Indian Masala Tea (Chai)': '/images/Food Pic/chai.jpg',
+    
+    // Soups
+    'Sweet Corn Soup': '/images/Food Pic/Sweet Corn Soup.png',
+  };
+  
+  return imageMap[itemName] || '/images/Food Pic/Hero Shot.png';
+};
+
 const Menu = () => {
   const categories = [
     {
@@ -8,200 +114,200 @@ const Menu = () => {
       icon: <Flame className="w-6 h-6" />,
       featured: true,
       items: [
-        { name: 'Hyderabadi Chicken Dum Biryani', price: '$16.49', description: 'Aromatic basmati rice with tender chicken' },
-        { name: 'Hyderabadi Goat Dum Biryani', price: '$17.99', description: 'Slow-cooked goat meat with fragrant spices' },
-        { name: 'Boneless Chicken Biryani', price: '$17.99', description: 'Premium boneless chicken biryani' },
-        { name: 'Boneless Mutton Biryani', price: '$18.99', description: 'Tender boneless mutton biryani' },
-        { name: 'Gongura Chicken Dum Biryani', price: '$17.49', description: 'Chicken biryani with tangy sorrel leaves' },
-        { name: 'Gongura Mutton Dum Biryani', price: '$18.49', description: 'Mutton biryani with signature gongura' },
-        { name: 'Chicken Ghee Roast Biryani', price: '$18.99', description: 'Rich ghee-roasted chicken biryani' },
-        { name: 'Mutton Ghee Roast Biryani', price: '$19.49', description: 'Premium ghee-roasted mutton biryani' },
-        { name: 'Nalli Gosht Biryani', price: '$21.99', description: 'Tender bone marrow biryani specialty' },
-        { name: 'Hyderabadi Veg Dum Biryani', price: '$13.99', description: 'Mixed vegetables with basmati rice' },
-        { name: 'Paneer Biryani', price: '$15.49', description: 'Cottage cheese biryani' },
-        { name: 'Paneer Ghee Roast Biryani', price: '$16.99', description: 'Rich ghee-roasted paneer biryani' },
-        { name: 'Egg Biryani', price: '$13.99', description: 'Boiled eggs layered with aromatic rice' },
-        { name: 'Vijaywada Spl. Bnls. Biryani', price: '$17.99', description: 'Spicy Vijayawada style boneless chicken' },
-        { name: 'Ulavacharu Chicken Dum Biryani', price: '$17.99', description: 'Chicken with horse gram soup' },
-        { name: 'Shirmp Biryani', price: '$18.49', description: 'Fresh shrimp biryani' },
-        { name: 'Fish Biryani', price: '$17.99', description: 'Fresh fish layered with rice' },
+        { name: 'Hyderabadi Chicken Dum Biryani', price: '$16.49', description: 'Aromatic basmati rice with tender chicken', image: getMenuItemImage('Hyderabadi Chicken Dum Biryani') },
+        { name: 'Hyderabadi Goat Dum Biryani', price: '$17.99', description: 'Slow-cooked goat meat with fragrant spices', image: getMenuItemImage('Hyderabadi Goat Dum Biryani') },
+        { name: 'Boneless Chicken Biryani', price: '$17.99', description: 'Premium boneless chicken biryani', image: getMenuItemImage('Boneless Chicken Biryani') },
+        { name: 'Boneless Mutton Biryani', price: '$18.99', description: 'Tender boneless mutton biryani', image: getMenuItemImage('Boneless Mutton Biryani') },
+        { name: 'Gongura Chicken Dum Biryani', price: '$17.49', description: 'Chicken biryani with tangy sorrel leaves', image: getMenuItemImage('Gongura Chicken Dum Biryani') },
+        { name: 'Gongura Mutton Dum Biryani', price: '$18.49', description: 'Mutton biryani with signature gongura', image: getMenuItemImage('Gongura Mutton Dum Biryani') },
+        { name: 'Chicken Ghee Roast Biryani', price: '$18.99', description: 'Rich ghee-roasted chicken biryani', image: getMenuItemImage('Chicken Ghee Roast Biryani') },
+        { name: 'Mutton Ghee Roast Biryani', price: '$19.49', description: 'Premium ghee-roasted mutton biryani', image: getMenuItemImage('Mutton Ghee Roast Biryani') },
+        { name: 'Nalli Gosht Biryani', price: '$21.99', description: 'Tender bone marrow biryani specialty', image: getMenuItemImage('Nalli Gosht Biryani') },
+        { name: 'Hyderabadi Veg Dum Biryani', price: '$13.99', description: 'Mixed vegetables with basmati rice', image: getMenuItemImage('Hyderabadi Veg Dum Biryani') },
+        { name: 'Paneer Biryani', price: '$15.49', description: 'Cottage cheese biryani', image: getMenuItemImage('Paneer Biryani') },
+        { name: 'Paneer Ghee Roast Biryani', price: '$16.99', description: 'Rich ghee-roasted paneer biryani', image: getMenuItemImage('Paneer Ghee Roast Biryani') },
+        { name: 'Egg Biryani', price: '$13.99', description: 'Boiled eggs layered with aromatic rice', image: getMenuItemImage('Egg Biryani') },
+        { name: 'Vijaywada Spl. Bnls. Biryani', price: '$17.99', description: 'Spicy Vijayawada style boneless chicken', image: getMenuItemImage('Vijaywada Spl. Bnls. Biryani') },
+        { name: 'Ulavacharu Chicken Dum Biryani', price: '$17.99', description: 'Chicken with horse gram soup', image: getMenuItemImage('Ulavacharu Chicken Dum Biryani') },
+        { name: 'Shirmp Biryani', price: '$18.49', description: 'Fresh shrimp biryani', image: getMenuItemImage('Shirmp Biryani') },
+        { name: 'Fish Biryani', price: '$17.99', description: 'Fresh fish layered with rice', image: getMenuItemImage('Fish Biryani') },
       ]
     },
     {
       name: 'Appetizers (Vegetarian)',
       icon: <Leaf className="w-6 h-6" />,
       items: [
-        { name: 'Vegetable Samosa {2}', price: '$6.99', description: 'Minced potatoes & peas wrapped in pastry dough & fried' },
-        { name: 'Mix Veg Pakoda', price: '$12.99', description: 'Veggies coated in spiced gram flour batter and deep-fried' },
-        { name: 'Chilli Idli', price: '$14.99', description: 'Fried idli covered in special sauce with garlic and hot chillies' },
-        { name: 'Gobi Manchurian', price: '$14.99', description: 'Stir fried cauliflower in Manchurian sauce' },
-        { name: 'Gobi 65 Dry / Wet', price: '$14.99', description: 'Spicy battered cauliflower tossed in sauce' },
-        { name: 'Chilli Paneer', price: '$15.49', description: 'Wok tossed paneer with tangy chilli sauce' },
-        { name: 'Paneer 65 Dry / Wet', price: '$15.49', description: 'Spicy battered paneer tossed in sauce' },
-        { name: 'Paneer Tikka Kabab', price: '$16.49', description: 'Grilled cottage cheese with bell peppers' },
-        { name: 'Crispy Corn', price: '$14.99', description: 'Golden-fried corn kernels tossed with onions and spices' },
-        { name: 'Karampodi Gobi', price: '$14.99', description: 'Gobi sautéed with karampodi and herbs' },
+        { name: 'Vegetable Samosa {2}', price: '$6.99', description: 'Minced potatoes & peas wrapped in pastry dough & fried', image: getMenuItemImage('Vegetable Samosa {2}') },
+        { name: 'Mix Veg Pakoda', price: '$12.99', description: 'Veggies coated in spiced gram flour batter and deep-fried', image: getMenuItemImage('Mix Veg Pakoda') },
+        { name: 'Chilli Idli', price: '$14.99', description: 'Fried idli covered in special sauce with garlic and hot chillies', image: getMenuItemImage('Chilli Idli') },
+        { name: 'Gobi Manchurian', price: '$14.99', description: 'Stir fried cauliflower in Manchurian sauce', image: getMenuItemImage('Gobi Manchurian') },
+        { name: 'Gobi 65 Dry / Wet', price: '$14.99', description: 'Spicy battered cauliflower tossed in sauce', image: getMenuItemImage('Gobi 65 Dry / Wet') },
+        { name: 'Chilli Paneer', price: '$15.49', description: 'Wok tossed paneer with tangy chilli sauce', image: getMenuItemImage('Chilli Paneer') },
+        { name: 'Paneer 65 Dry / Wet', price: '$15.49', description: 'Spicy battered paneer tossed in sauce', image: getMenuItemImage('Paneer 65 Dry / Wet') },
+        { name: 'Paneer Tikka Kabab', price: '$16.49', description: 'Grilled cottage cheese with bell peppers', image: getMenuItemImage('Paneer Tikka Kabab') },
+        { name: 'Crispy Corn', price: '$14.99', description: 'Golden-fried corn kernels tossed with onions and spices', image: getMenuItemImage('Crispy Corn') },
+        { name: 'Karampodi Gobi', price: '$14.99', description: 'Gobi sautéed with karampodi and herbs', image: getMenuItemImage('Karampodi Gobi') },
       ]
     },
     {
       name: 'Appetizers (Non-Veg)',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Chicken 65 Dry / Wet', price: '$15.49', description: 'Marinated chicken deep fried and tossed in sauce' },
-        { name: 'Chicken Lollipops (Dry) {4}', price: '$16.49', description: 'Chicken drumsticks marinated and deep fried' },
-        { name: 'Chilli Chicken', price: '$16.49', description: 'Wok tossed chicken coated with tangy chilli sauce' },
-        { name: 'Chicken Manchurian', price: '$16.99', description: 'Battered fried chicken in Manchurian sauce' },
-        { name: 'Chicken 555', price: '$16.99', description: 'Deep fried chicken in special sauce with cashews' },
-        { name: 'Chicken Majestic', price: '$16.99', description: 'Marinated chicken in rich and creamy sauce' },
-        { name: 'Chicken Ghee Roast', price: '$16.99', description: 'Chicken with green chillies, ghee and special spices' },
-        { name: 'Chicken Pepper Fry', price: '$16.99', description: 'Chicken deep fried with pepper to perfection' },
-        { name: 'Karampodi Kodi (Chicken)', price: '$16.99', description: 'Chicken fried with karampodi and herbs' },
-        { name: 'Kaju Kodi Fry', price: '$16.99', description: 'Chicken with cashew, cinnamon and clove' },
-        { name: 'Mutton Pepper Fry (Bone-In)', price: '$16.99', description: 'Bone-in goat fried with chettinad masala' },
-        { name: 'Mutton Roast (Boneless)', price: '$17.49', description: 'Boneless goat with chettinad masala' },
-        { name: 'Mutton Ghee Roast (Boneless)', price: '$18.99', description: 'Premium boneless goat ghee roast' },
-        { name: 'Apollo Fish', price: '$17.99', description: 'Spicy fried fish specialty' },
-        { name: 'Chilli Fish', price: '$17.99', description: 'Fish tossed in spicy chilli sauce' },
-        { name: 'Chilli Shrimp', price: '$18.49', description: 'Shrimp in tangy chilli sauce' },
-        { name: 'Tandoori Chicken (Half)', price: '$14.99', description: 'Clay oven roasted chicken' },
-        { name: 'Tandoori Chicken (Full)', price: '$24.99', description: 'Full clay oven roasted chicken' },
-        { name: 'Chicken Tikka Kabab', price: '$16.99', description: 'Grilled chicken tikka from tandoor' },
+        { name: 'Chicken 65 Dry / Wet', price: '$15.49', description: 'Marinated chicken deep fried and tossed in sauce', image: getMenuItemImage('Chicken 65 Dry / Wet') },
+        { name: 'Chicken Lollipops (Dry) {4}', price: '$16.49', description: 'Chicken drumsticks marinated and deep fried', image: getMenuItemImage('Chicken Lollipops (Dry) {4}') },
+        { name: 'Chilli Chicken', price: '$16.49', description: 'Wok tossed chicken coated with tangy chilli sauce', image: getMenuItemImage('Chilli Chicken') },
+        { name: 'Chicken Manchurian', price: '$16.99', description: 'Battered fried chicken in Manchurian sauce', image: getMenuItemImage('Chicken Manchurian') },
+        { name: 'Chicken 555', price: '$16.99', description: 'Deep fried chicken in special sauce with cashews', image: getMenuItemImage('Chicken 555') },
+        { name: 'Chicken Majestic', price: '$16.99', description: 'Marinated chicken in rich and creamy sauce', image: getMenuItemImage('Chicken Majestic') },
+        { name: 'Chicken Ghee Roast', price: '$16.99', description: 'Chicken with green chillies, ghee and special spices', image: getMenuItemImage('Chicken Ghee Roast') },
+        { name: 'Chicken Pepper Fry', price: '$16.99', description: 'Chicken deep fried with pepper to perfection', image: getMenuItemImage('Chicken Pepper Fry') },
+        { name: 'Karampodi Kodi (Chicken)', price: '$16.99', description: 'Chicken fried with karampodi and herbs', image: getMenuItemImage('Karampodi Kodi (Chicken)') },
+        { name: 'Kaju Kodi Fry', price: '$16.99', description: 'Chicken with cashew, cinnamon and clove', image: getMenuItemImage('Kaju Kodi Fry') },
+        { name: 'Mutton Pepper Fry (Bone-In)', price: '$16.99', description: 'Bone-in goat fried with chettinad masala', image: getMenuItemImage('Mutton Pepper Fry (Bone-In)') },
+        { name: 'Mutton Roast (Boneless)', price: '$17.49', description: 'Boneless goat with chettinad masala', image: getMenuItemImage('Mutton Roast (Boneless)') },
+        { name: 'Mutton Ghee Roast (Boneless)', price: '$18.99', description: 'Premium boneless goat ghee roast', image: getMenuItemImage('Mutton Ghee Roast (Boneless)') },
+        { name: 'Apollo Fish', price: '$17.99', description: 'Spicy fried fish specialty', image: getMenuItemImage('Apollo Fish') },
+        { name: 'Chilli Fish', price: '$17.99', description: 'Fish tossed in spicy chilli sauce', image: getMenuItemImage('Chilli Fish') },
+        { name: 'Chilli Shrimp', price: '$18.49', description: 'Shrimp in tangy chilli sauce', image: getMenuItemImage('Chilli Shrimp') },
+        { name: 'Tandoori Chicken (Half)', price: '$14.99', description: 'Clay oven roasted chicken', image: getMenuItemImage('Tandoori Chicken (Half)') },
+        { name: 'Tandoori Chicken (Full)', price: '$24.99', description: 'Full clay oven roasted chicken', image: getMenuItemImage('Tandoori Chicken (Full)') },
+        { name: 'Chicken Tikka Kabab', price: '$16.99', description: 'Grilled chicken tikka from tandoor', image: getMenuItemImage('Chicken Tikka Kabab') },
       ]
     },
     {
       name: 'Vegetarian Curries',
       icon: <Leaf className="w-6 h-6" />,
       items: [
-        { name: 'Dal Tadka', price: '$14.99', description: 'Yellow lentils tempered with spices' },
-        { name: 'Dal Makhani', price: '$15.99', description: 'Creamy black lentils with butter' },
-        { name: 'Chana Masala', price: '$14.99', description: 'Chickpeas in traditional North Indian style' },
-        { name: 'Paneer Butter Masala', price: '$16.99', description: 'Cottage cheese in rich butter cream sauce' },
-        { name: 'Palak Paneer (Spinach)', price: '$17.49', description: 'Cottage cheese in spinach puree' },
-        { name: 'Paneer Tikka Masala', price: '$16.99', description: 'Grilled paneer in tomato cream sauce' },
-        { name: 'Kadai Paneer', price: '$17.49', description: 'Paneer with bell peppers in creamy gravy' },
-        { name: 'Shahi Paneer', price: '$17.49', description: 'Paneer in creamy cashew paste gravy' },
-        { name: 'Vegetable Korma', price: '$15.99', description: 'Mixed vegetables in delicious creamy gravy' },
-        { name: 'Kadai Vegetable', price: '$15.99', description: 'Mixed vegetables with bell pepper and onions' },
-        { name: 'Malai Kofta', price: '$16.99', description: 'Fried vegetable balls in mild creamy gravy' },
-        { name: 'Gutti Vankay Curry', price: '$15.99', description: 'Eggplant with sesame, peanut and yogurt' },
-        { name: 'Aloo Gobi Masala', price: '$15.99', description: 'Potatoes and cauliflower Punjabi style' },
+        { name: 'Dal Tadka', price: '$14.99', description: 'Yellow lentils tempered with spices', image: getMenuItemImage('Dal Tadka') },
+        { name: 'Dal Makhani', price: '$15.99', description: 'Creamy black lentils with butter', image: getMenuItemImage('Dal Makhani') },
+        { name: 'Chana Masala', price: '$14.99', description: 'Chickpeas in traditional North Indian style', image: getMenuItemImage('Chana Masala') },
+        { name: 'Paneer Butter Masala', price: '$16.99', description: 'Cottage cheese in rich butter cream sauce', image: getMenuItemImage('Paneer Butter Masala') },
+        { name: 'Palak Paneer (Spinach)', price: '$17.49', description: 'Cottage cheese in spinach puree', image: getMenuItemImage('Palak Paneer (Spinach)') },
+        { name: 'Paneer Tikka Masala', price: '$16.99', description: 'Grilled paneer in tomato cream sauce', image: getMenuItemImage('Paneer Tikka Masala') },
+        { name: 'Kadai Paneer', price: '$17.49', description: 'Paneer with bell peppers in creamy gravy', image: getMenuItemImage('Kadai Paneer') },
+        { name: 'Shahi Paneer', price: '$17.49', description: 'Paneer in creamy cashew paste gravy', image: getMenuItemImage('Shahi Paneer') },
+        { name: 'Vegetable Korma', price: '$15.99', description: 'Mixed vegetables in delicious creamy gravy', image: getMenuItemImage('Vegetable Korma') },
+        { name: 'Kadai Vegetable', price: '$15.99', description: 'Mixed vegetables with bell pepper and onions', image: getMenuItemImage('Kadai Vegetable') },
+        { name: 'Malai Kofta', price: '$16.99', description: 'Fried vegetable balls in mild creamy gravy', image: getMenuItemImage('Malai Kofta') },
+        { name: 'Gutti Vankay Curry', price: '$15.99', description: 'Eggplant with sesame, peanut and yogurt', image: getMenuItemImage('Gutti Vankay Curry') },
+        { name: 'Aloo Gobi Masala', price: '$15.99', description: 'Potatoes and cauliflower Punjabi style', image: getMenuItemImage('Aloo Gobi Masala') },
       ]
     },
     {
       name: 'Chicken Curries',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Butter Chicken', price: '$17.49', description: 'Chicken in tomato puree and cream' },
-        { name: 'Chicken Tikka Masala', price: '$17.49', description: 'Chicken tikka in fenugreek tomato gravy' },
-        { name: 'Kadai Chicken', price: '$17.49', description: 'Chicken with bell peppers in creamy gravy' },
-        { name: 'Hyderabad Chicken Curry', price: '$17.49', description: 'Nizam special boneless chicken dish' },
-        { name: 'Chicken Shahi Korma', price: '$17.49', description: 'Mughlai delight with cardamom flavor' },
-        { name: 'Andhra Chicken Curry', price: '$17.49', description: 'Bone-in chicken with special Andhra spices' },
-        { name: 'Gongura Chicken Curry', price: '$17.99', description: 'Chicken with red sorrel leaves & spices' },
-        { name: 'Amaravati Chicken Curry', price: '$17.99', description: 'Spicy chicken with hint of coconut' },
-        { name: 'Ulavacharu Chicken Curry', price: '$18.49', description: 'Chicken with horse gram soup' },
-        { name: 'Chicken Vindaloo', price: '$17.49', description: 'Chicken with potatoes and spice herbs' },
-        { name: 'Chicken Pepper Masala', price: '$17.49', description: 'Tender chicken with ground spices' },
-        { name: 'Karaikudi Chicken', price: '$17.49', description: 'Aromatic chicken with special spices' },
+        { name: 'Butter Chicken', price: '$17.49', description: 'Chicken in tomato puree and cream', image: getMenuItemImage('Butter Chicken') },
+        { name: 'Chicken Tikka Masala', price: '$17.49', description: 'Chicken tikka in fenugreek tomato gravy', image: getMenuItemImage('Chicken Tikka Masala') },
+        { name: 'Kadai Chicken', price: '$17.49', description: 'Chicken with bell peppers in creamy gravy', image: getMenuItemImage('Kadai Chicken') },
+        { name: 'Hyderabad Chicken Curry', price: '$17.49', description: 'Nizam special boneless chicken dish', image: getMenuItemImage('Hyderabad Chicken Curry') },
+        { name: 'Chicken Shahi Korma', price: '$17.49', description: 'Mughlai delight with cardamom flavor', image: getMenuItemImage('Chicken Shahi Korma') },
+        { name: 'Andhra Chicken Curry', price: '$17.49', description: 'Bone-in chicken with special Andhra spices', image: getMenuItemImage('Andhra Chicken Curry') },
+        { name: 'Gongura Chicken Curry', price: '$17.99', description: 'Chicken with red sorrel leaves & spices', image: getMenuItemImage('Gongura Chicken Curry') },
+        { name: 'Amaravati Chicken Curry', price: '$17.99', description: 'Spicy chicken with hint of coconut', image: getMenuItemImage('Amaravati Chicken Curry') },
+        { name: 'Ulavacharu Chicken Curry', price: '$18.49', description: 'Chicken with horse gram soup', image: getMenuItemImage('Ulavacharu Chicken Curry') },
+        { name: 'Chicken Vindaloo', price: '$17.49', description: 'Chicken with potatoes and spice herbs', image: getMenuItemImage('Chicken Vindaloo') },
+        { name: 'Chicken Pepper Masala', price: '$17.49', description: 'Tender chicken with ground spices', image: getMenuItemImage('Chicken Pepper Masala') },
+        { name: 'Karaikudi Chicken', price: '$17.49', description: 'Aromatic chicken with special spices', image: getMenuItemImage('Karaikudi Chicken') },
       ]
     },
     {
       name: 'Mutton/Goat Curries',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Goat Korma', price: '$18.49', description: 'Goat simmered in creamy sauce with cardamoms' },
-        { name: 'Mutton Masala', price: '$19.49', description: 'Goat in fresh ground spices with onions & tomato' },
-        { name: 'Hyderabad Goat Curry', price: '$19.49', description: 'Goat with roasted dry spices paste' },
-        { name: 'Gongura Mutton Curry', price: '$19.49', description: 'Traditional goat with gongura leaves' },
-        { name: 'Amaravati Mutton Curry', price: '$19.49', description: 'Tender goat with spicy sauce and coconut' },
-        { name: 'Ulavacharu Goat Curry', price: '$19.99', description: 'Goat with horse gram soup and spices' },
-        { name: 'Mutton Pepper Masala', price: '$18.49', description: 'Tender mutton with ground spices' },
-        { name: 'Mutton Vindaloo (Goat)', price: '$18.49', description: 'Tangy spicy curry with goat and potato' },
-        { name: 'Karaikudi Goat Curry', price: '$19.49', description: 'Aromatic goat with special spices' },
-        { name: 'Lamb Rogan Gosh', price: '$19.49', description: 'Tender lamb in tomato and onion gravy' },
-        { name: 'Lamb Korma', price: '$19.49', description: 'Lamb in mild cashew sauce with herbs' },
-        { name: 'Kadai Lamb', price: '$19.49', description: 'Northwest frontier specialty with peppers' },
-        { name: 'Lamb Saag', price: '$19.49', description: 'Spiced lamb with spinach and cilantro' },
+        { name: 'Goat Korma', price: '$18.49', description: 'Goat simmered in creamy sauce with cardamoms', image: getMenuItemImage('Goat Korma') },
+        { name: 'Mutton Masala', price: '$19.49', description: 'Goat in fresh ground spices with onions & tomato', image: getMenuItemImage('Mutton Masala') },
+        { name: 'Hyderabad Goat Curry', price: '$19.49', description: 'Goat with roasted dry spices paste', image: getMenuItemImage('Hyderabad Goat Curry') },
+        { name: 'Gongura Mutton Curry', price: '$19.49', description: 'Traditional goat with gongura leaves', image: getMenuItemImage('Gongura Mutton Curry') },
+        { name: 'Amaravati Mutton Curry', price: '$19.49', description: 'Tender goat with spicy sauce and coconut', image: getMenuItemImage('Amaravati Mutton Curry') },
+        { name: 'Ulavacharu Goat Curry', price: '$19.99', description: 'Goat with horse gram soup and spices', image: getMenuItemImage('Ulavacharu Goat Curry') },
+        { name: 'Mutton Pepper Masala', price: '$18.49', description: 'Tender mutton with ground spices', image: getMenuItemImage('Mutton Pepper Masala') },
+        { name: 'Mutton Vindaloo (Goat)', price: '$18.49', description: 'Tangy spicy curry with goat and potato', image: getMenuItemImage('Mutton Vindaloo (Goat)') },
+        { name: 'Karaikudi Goat Curry', price: '$19.49', description: 'Aromatic goat with special spices', image: getMenuItemImage('Karaikudi Goat Curry') },
+        { name: 'Lamb Rogan Gosh', price: '$19.49', description: 'Tender lamb in tomato and onion gravy', image: getMenuItemImage('Lamb Rogan Gosh') },
+        { name: 'Lamb Korma', price: '$19.49', description: 'Lamb in mild cashew sauce with herbs', image: getMenuItemImage('Lamb Korma') },
+        { name: 'Kadai Lamb', price: '$19.49', description: 'Northwest frontier specialty with peppers', image: getMenuItemImage('Kadai Lamb') },
+        { name: 'Lamb Saag', price: '$19.49', description: 'Spiced lamb with spinach and cilantro', image: getMenuItemImage('Lamb Saag') },
       ]
     },
     {
       name: 'Dosas & South Indian',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Plain Dosa', price: '$9.49', description: 'Traditional crispy rice and lentil crepe' },
-        { name: 'Masala Dosa', price: '$11.49', description: 'Dosa filled with spiced potato filling' },
-        { name: 'Mysore Masala Dosa', price: '$12.49', description: 'Spicy red chutney dosa with potato filling' },
-        { name: 'Paneer Tikka Dosa', price: '$13.99', description: 'Dosa with paneer tikka filling' },
-        { name: 'Chicken Tikka Dosa', price: '$14.99', description: 'Dosa with chicken tikka filling' },
-        { name: '70 MM Dosa (Dine in Only)', price: '$12.99', description: 'Giant 70mm crispy dosa' },
-        { name: 'Rava Masala Dosa', price: '$14.49', description: 'Semolina dosa with potato filling (15 mins)' },
-        { name: 'Idli {2}', price: '$6.99', description: 'Steamed rice cakes with sambar and chutney' },
-        { name: 'Medu Vada {2}', price: '$6.99', description: 'Crispy lentil donuts with sambar' },
-        { name: 'Plain Uthappam', price: '$9.99', description: 'Thick rice pancake' },
-        { name: 'Onion Uthappam', price: '$10.49', description: 'Uthappam topped with onions' },
-        { name: 'Mix Veg Uthappam', price: '$11.49', description: 'Uthappam with mixed vegetables' },
+        { name: 'Plain Dosa', price: '$9.49', description: 'Traditional crispy rice and lentil crepe', image: getMenuItemImage('Plain Dosa') },
+        { name: 'Masala Dosa', price: '$11.49', description: 'Dosa filled with spiced potato filling', image: getMenuItemImage('Masala Dosa') },
+        { name: 'Mysore Masala Dosa', price: '$12.49', description: 'Spicy red chutney dosa with potato filling', image: getMenuItemImage('Mysore Masala Dosa') },
+        { name: 'Paneer Tikka Dosa', price: '$13.99', description: 'Dosa with paneer tikka filling', image: getMenuItemImage('Paneer Tikka Dosa') },
+        { name: 'Chicken Tikka Dosa', price: '$14.99', description: 'Dosa with chicken tikka filling', image: getMenuItemImage('Chicken Tikka Dosa') },
+        { name: '70 MM Dosa (Dine in Only)', price: '$12.99', description: 'Giant 70mm crispy dosa', image: getMenuItemImage('70 MM Dosa (Dine in Only)') },
+        { name: 'Rava Masala Dosa', price: '$14.49', description: 'Semolina dosa with potato filling (15 mins)', image: getMenuItemImage('Rava Masala Dosa') },
+        { name: 'Idli {2}', price: '$6.99', description: 'Steamed rice cakes with sambar and chutney', image: getMenuItemImage('Idli {2}') },
+        { name: 'Medu Vada {2}', price: '$6.99', description: 'Crispy lentil donuts with sambar', image: getMenuItemImage('Medu Vada {2}') },
+        { name: 'Plain Uthappam', price: '$9.99', description: 'Thick rice pancake', image: getMenuItemImage('Plain Uthappam') },
+        { name: 'Onion Uthappam', price: '$10.49', description: 'Uthappam topped with onions', image: getMenuItemImage('Onion Uthappam') },
+        { name: 'Mix Veg Uthappam', price: '$11.49', description: 'Uthappam with mixed vegetables', image: getMenuItemImage('Mix Veg Uthappam') },
       ]
     },
     {
       name: 'Indo Chinese',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Veg Hakka Noodles', price: '$13.99', description: 'Noodles stir fried with veggies & spices' },
-        { name: 'Chicken Hakka Noodles', price: '$15.49', description: 'Noodles with chicken, egg, veggies' },
-        { name: 'Shrimp Hakka Noodles', price: '$16.99', description: 'Noodles with shrimp, egg, veggies' },
-        { name: 'Veg Fried Rice', price: '$13.49', description: 'Aromatic rice with fine chopped vegetables' },
-        { name: 'Chicken Fried Rice', price: '$15.49', description: 'Rice with chicken and vegetables' },
-        { name: 'Shrimp Fried Rice', price: '$16.99', description: 'Rice with shrimp and vegetables' },
-        { name: 'Chicken Schezwan Fried Rice', price: '$16.99', description: 'Spicy Schezwan rice with chicken' },
-        { name: 'Veg Manchurian (Wet)', price: '$14.99', description: 'Vegetable balls in Manchurian sauce' },
-        { name: 'Chicken Manchurian (Wet)', price: '$17.99', description: 'Chicken in Manchurian sauce' },
+        { name: 'Veg Hakka Noodles', price: '$13.99', description: 'Noodles stir fried with veggies & spices', image: getMenuItemImage('Veg Hakka Noodles') },
+        { name: 'Chicken Hakka Noodles', price: '$15.49', description: 'Noodles with chicken, egg, veggies', image: getMenuItemImage('Chicken Hakka Noodles') },
+        { name: 'Shrimp Hakka Noodles', price: '$16.99', description: 'Noodles with shrimp, egg, veggies', image: getMenuItemImage('Shrimp Hakka Noodles') },
+        { name: 'Veg Fried Rice', price: '$13.49', description: 'Aromatic rice with fine chopped vegetables', image: getMenuItemImage('Veg Fried Rice') },
+        { name: 'Chicken Fried Rice', price: '$15.49', description: 'Rice with chicken and vegetables', image: getMenuItemImage('Chicken Fried Rice') },
+        { name: 'Shrimp Fried Rice', price: '$16.99', description: 'Rice with shrimp and vegetables', image: getMenuItemImage('Shrimp Fried Rice') },
+        { name: 'Chicken Schezwan Fried Rice', price: '$16.99', description: 'Spicy Schezwan rice with chicken', image: getMenuItemImage('Chicken Schezwan Fried Rice') },
+        { name: 'Veg Manchurian (Wet)', price: '$14.99', description: 'Vegetable balls in Manchurian sauce', image: getMenuItemImage('Veg Manchurian (Wet)') },
+        { name: 'Chicken Manchurian (Wet)', price: '$17.99', description: 'Chicken in Manchurian sauce', image: getMenuItemImage('Chicken Manchurian (Wet)') },
       ]
     },
     {
       name: 'Seafood',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Fish Masala', price: '$17.99', description: 'Marinated fish with fried onions and tomatoes' },
-        { name: 'Fish Chettinadu Curry', price: '$17.99', description: 'Fish with special Chettinad masala' },
-        { name: 'Fish Pulusu', price: '$17.99', description: 'Fish in hot Andhra spices' },
-        { name: 'Shrimp Iguru', price: '$19.99', description: 'Shrimp in delicately ground spices' },
-        { name: 'Amaravati Royyala Kura', price: '$19.99', description: 'Tender shrimp with spicy Indian spices' },
-        { name: 'Apollo Fish', price: '$17.99', description: 'Spicy fried fish specialty' },
-        { name: 'Chilli Fish', price: '$17.99', description: 'Fish tossed in spicy chilli sauce' },
-        { name: 'Chilli Shrimp', price: '$18.49', description: 'Shrimp in tangy chilli sauce' },
-        { name: 'Tandoori Pomfret (Fish)', price: '$18.49', description: 'Clay oven roasted pomfret' },
+        { name: 'Fish Masala', price: '$17.99', description: 'Marinated fish with fried onions and tomatoes', image: getMenuItemImage('Fish Masala') },
+        { name: 'Fish Chettinadu Curry', price: '$17.99', description: 'Fish with special Chettinad masala', image: getMenuItemImage('Fish Chettinadu Curry') },
+        { name: 'Fish Pulusu', price: '$17.99', description: 'Fish in hot Andhra spices', image: getMenuItemImage('Fish Pulusu') },
+        { name: 'Shrimp Iguru', price: '$19.99', description: 'Shrimp in delicately ground spices', image: getMenuItemImage('Shrimp Iguru') },
+        { name: 'Amaravati Royyala Kura', price: '$19.99', description: 'Tender shrimp with spicy Indian spices', image: getMenuItemImage('Amaravati Royyala Kura') },
+        { name: 'Apollo Fish', price: '$17.99', description: 'Spicy fried fish specialty', image: getMenuItemImage('Apollo Fish') },
+        { name: 'Chilli Fish', price: '$17.99', description: 'Fish tossed in spicy chilli sauce', image: getMenuItemImage('Chilli Fish') },
+        { name: 'Chilli Shrimp', price: '$18.49', description: 'Shrimp in tangy chilli sauce', image: getMenuItemImage('Chilli Shrimp') },
+        { name: 'Tandoori Pomfret (Fish)', price: '$18.49', description: 'Clay oven roasted pomfret', image: getMenuItemImage('Tandoori Pomfret (Fish)') },
       ]
     },
     {
       name: 'Breads & Sides',
       icon: <Leaf className="w-6 h-6" />,
       items: [
-        { name: 'Plain Naan', price: '$2.99', description: 'Soft white flour bread' },
-        { name: 'Butter Naan', price: '$3.49', description: 'Naan brushed with butter' },
-        { name: 'Garlic Naan', price: '$4.49', description: 'Naan with fresh garlic' },
-        { name: 'Tandoori Roti', price: '$3.49', description: 'Whole wheat bread from tandoor' },
-        { name: 'Onion Kulcha', price: '$4.49', description: 'Naan stuffed with spiced onions' },
-        { name: 'Bread Basket', price: '$14.99', description: 'Tandoori Roti, Garlic, Plain Naan, Onion Kulcha' },
-        { name: 'Rice', price: '$3.99', description: 'Plain basmati rice' },
-        { name: 'Masala Rice', price: '$4.99', description: 'Spiced basmati rice' },
-        { name: 'Pulav Rice', price: '$6.99', description: 'Aromatic rice with vegetables' },
-        { name: 'Raita / Salan', price: '$1.00', description: 'Yogurt side or curry sauce' },
-        { name: 'Onion Salad', price: '$3.99', description: 'Onion, chilli and lemon slices' },
+        { name: 'Plain Naan', price: '$2.99', description: 'Soft white flour bread', image: getMenuItemImage('Plain Naan') },
+        { name: 'Butter Naan', price: '$3.49', description: 'Naan brushed with butter', image: getMenuItemImage('Butter Naan') },
+        { name: 'Garlic Naan', price: '$4.49', description: 'Naan with fresh garlic', image: getMenuItemImage('Garlic Naan') },
+        { name: 'Tandoori Roti', price: '$3.49', description: 'Whole wheat bread from tandoor', image: getMenuItemImage('Tandoori Roti') },
+        { name: 'Onion Kulcha', price: '$4.49', description: 'Naan stuffed with spiced onions', image: getMenuItemImage('Onion Kulcha') },
+        { name: 'Bread Basket', price: '$14.99', description: 'Tandoori Roti, Garlic, Plain Naan, Onion Kulcha', image: getMenuItemImage('Bread Basket') },
+        { name: 'Rice', price: '$3.99', description: 'Plain basmati rice', image: getMenuItemImage('Rice') },
+        { name: 'Masala Rice', price: '$4.99', description: 'Spiced basmati rice', image: getMenuItemImage('Masala Rice') },
+        { name: 'Pulav Rice', price: '$6.99', description: 'Aromatic rice with vegetables', image: getMenuItemImage('Pulav Rice') },
+        { name: 'Raita / Salan', price: '$1.00', description: 'Yogurt side or curry sauce', image: getMenuItemImage('Raita / Salan') },
+        { name: 'Onion Salad', price: '$3.99', description: 'Onion, chilli and lemon slices', image: getMenuItemImage('Onion Salad') },
       ]
     },
     {
       name: 'Desserts & Beverages',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Gulab Jamun', price: '$4.99', description: 'Deep fried milk pastry in rose honey syrup' },
-        { name: 'Rasmalai', price: '$5.49', description: 'Cheese patties in cold sweetened milk' },
-        { name: 'Mango Lassi', price: '$4.99', description: 'Refreshing mango yogurt drink' },
-        { name: 'Sweet Lassi', price: '$4.99', description: 'Sweet yogurt drink' },
-        { name: 'Indian Masala Tea (Chai)', price: '$3.99', description: 'Spiced Indian tea with milk' },
-        { name: 'Falooda Shake', price: '$5.99', description: 'Traditional falooda milkshake' },
-        { name: 'Mango Shake', price: '$5.99', description: 'Fresh mango shake' },
-        { name: 'Ice Cream Double Scoop', price: '$6.99', description: 'Ask for available flavours' },
-        { name: 'Matka Kulfi', price: '$4.49', description: 'Traditional Indian ice cream' },
+        { name: 'Gulab Jamun', price: '$4.99', description: 'Deep fried milk pastry in rose honey syrup', image: getMenuItemImage('Gulab Jamun') },
+        { name: 'Rasmalai', price: '$5.49', description: 'Cheese patties in cold sweetened milk', image: getMenuItemImage('Rasmalai') },
+        { name: 'Mango Lassi', price: '$4.99', description: 'Refreshing mango yogurt drink', image: getMenuItemImage('Mango Lassi') },
+        { name: 'Sweet Lassi', price: '$4.99', description: 'Sweet yogurt drink', image: getMenuItemImage('Sweet Lassi') },
+        { name: 'Indian Masala Tea (Chai)', price: '$3.99', description: 'Spiced Indian tea with milk', image: getMenuItemImage('Indian Masala Tea (Chai)') },
+        { name: 'Falooda Shake', price: '$5.99', description: 'Traditional falooda milkshake', image: getMenuItemImage('Falooda Shake') },
+        { name: 'Mango Shake', price: '$5.99', description: 'Fresh mango shake', image: getMenuItemImage('Mango Shake') },
+        { name: 'Ice Cream Double Scoop', price: '$6.99', description: 'Ask for available flavours', image: getMenuItemImage('Ice Cream Double Scoop') },
+        { name: 'Matka Kulfi', price: '$4.49', description: 'Traditional Indian ice cream', image: getMenuItemImage('Matka Kulfi') },
       ]
     },
     {
@@ -209,32 +315,32 @@ const Menu = () => {
       icon: <Flame className="w-6 h-6" />,
       featured: true,
       items: [
-        { name: 'Natukodi Fry Biryani', price: '$17.99', description: 'Country chicken fry biryani' },
-        { name: 'Gongura Goat Fry Biryani', price: '$18.99', description: 'Goat fry with gongura leaves' },
-        { name: 'Rajugari Royyala Fry Biryani', price: '$18.49', description: 'Shrimp fry biryani special' },
-        { name: 'Nalli Gosht Pulav', price: '$21.99', description: 'Bone marrow pulav' },
-        { name: 'Dosa with Chicken Curry', price: '$14.99', description: 'Crispy dosa served with chicken curry' },
-        { name: 'Dosa with Goat Curry', price: '$15.99', description: 'Crispy dosa served with goat curry' },
-        { name: 'Natukodi (Country Chicken) Fry', price: '$16.49', description: 'Traditional country chicken fry' },
-        { name: 'Gongura Mutton Fry', price: '$17.49', description: 'Mutton with bone fried in gongura' },
-        { name: 'Royyala Vepudu (Shrimp Fry)', price: '$18.49', description: 'Spicy Andhra style shrimp fry' },
+        { name: 'Natukodi Fry Biryani', price: '$17.99', description: 'Country chicken fry biryani', image: getMenuItemImage('Natukodi Fry Biryani') },
+        { name: 'Gongura Goat Fry Biryani', price: '$18.99', description: 'Goat fry with gongura leaves', image: getMenuItemImage('Gongura Goat Fry Biryani') },
+        { name: 'Rajugari Royyala Fry Biryani', price: '$18.49', description: 'Shrimp fry biryani special', image: getMenuItemImage('Rajugari Royyala Fry Biryani') },
+        { name: 'Nalli Gosht Pulav', price: '$21.99', description: 'Bone marrow pulav', image: getMenuItemImage('Nalli Gosht Pulav') },
+        { name: 'Dosa with Chicken Curry', price: '$14.99', description: 'Crispy dosa served with chicken curry', image: getMenuItemImage('Dosa with Chicken Curry') },
+        { name: 'Dosa with Goat Curry', price: '$15.99', description: 'Crispy dosa served with goat curry', image: getMenuItemImage('Dosa with Goat Curry') },
+        { name: 'Natukodi (Country Chicken) Fry', price: '$16.49', description: 'Traditional country chicken fry', image: getMenuItemImage('Natukodi (Country Chicken) Fry') },
+        { name: 'Gongura Mutton Fry', price: '$17.49', description: 'Mutton with bone fried in gongura', image: getMenuItemImage('Gongura Mutton Fry') },
+        { name: 'Royyala Vepudu (Shrimp Fry)', price: '$18.49', description: 'Spicy Andhra style shrimp fry', image: getMenuItemImage('Royyala Vepudu (Shrimp Fry)') },
       ]
     },
     {
       name: 'Lunch Specials',
       icon: <ChefHat className="w-6 h-6" />,
       items: [
-        { name: 'Paneer Tikka Combo', price: '$14.99', description: 'Served with Masala Rice or Plain Naan' },
-        { name: 'Chole Masala Combo', price: '$14.99', description: 'Served with Masala Rice or Plain Naan' },
-        { name: 'Dal Makhani Combo', price: '$14.99', description: 'Served with Masala Rice or Plain Naan' },
-        { name: 'Butter Chicken Combo', price: '$15.99', description: 'Served with Masala Rice or Plain Naan' },
-        { name: 'Chicken Tikka Combo', price: '$15.99', description: 'Served with Masala Rice or Plain Naan' },
-        { name: 'Hyderabadi Chicken Curry Combo', price: '$15.99', description: 'Served with Masala Rice or Plain Naan' },
-        { name: 'Veg Biryani Combo', price: '$13.99', description: 'With veg appetizer, curry, naan, raita, dessert' },
-        { name: 'Chicken Biryani Combo', price: '$14.99', description: 'With chicken appetizer, curry, naan, raita, dessert' },
-        { name: 'Goat Biryani Combo', price: '$16.99', description: 'With appetizer, curry, naan, raita, dessert' },
-        { name: 'Veg Thali', price: '$14.99', description: 'Complete vegetarian meal platter' },
-        { name: 'Non-Veg Thali', price: '$15.99', description: 'Complete non-vegetarian meal platter' },
+        { name: 'Paneer Tikka Combo', price: '$14.99', description: 'Served with Masala Rice or Plain Naan', image: getMenuItemImage('Paneer Tikka Combo') },
+        { name: 'Chole Masala Combo', price: '$14.99', description: 'Served with Masala Rice or Plain Naan', image: getMenuItemImage('Chole Masala Combo') },
+        { name: 'Dal Makhani Combo', price: '$14.99', description: 'Served with Masala Rice or Plain Naan', image: getMenuItemImage('Dal Makhani Combo') },
+        { name: 'Butter Chicken Combo', price: '$15.99', description: 'Served with Masala Rice or Plain Naan', image: getMenuItemImage('Butter Chicken Combo') },
+        { name: 'Chicken Tikka Combo', price: '$15.99', description: 'Served with Masala Rice or Plain Naan', image: getMenuItemImage('Chicken Tikka Combo') },
+        { name: 'Hyderabadi Chicken Curry Combo', price: '$15.99', description: 'Served with Masala Rice or Plain Naan', image: getMenuItemImage('Hyderabadi Chicken Curry Combo') },
+        { name: 'Veg Biryani Combo', price: '$13.99', description: 'With veg appetizer, curry, naan, raita, dessert', image: getMenuItemImage('Veg Biryani Combo') },
+        { name: 'Chicken Biryani Combo', price: '$14.99', description: 'With chicken appetizer, curry, naan, raita, dessert', image: getMenuItemImage('Chicken Biryani Combo') },
+        { name: 'Goat Biryani Combo', price: '$16.99', description: 'With appetizer, curry, naan, raita, dessert', image: getMenuItemImage('Goat Biryani Combo') },
+        { name: 'Veg Thali', price: '$14.99', description: 'Complete vegetarian meal platter', image: getMenuItemImage('Veg Thali') },
+        { name: 'Non-Veg Thali', price: '$15.99', description: 'Complete non-vegetarian meal platter', image: getMenuItemImage('Non-Veg Thali') },
       ]
     },
   ];
@@ -293,15 +399,30 @@ const Menu = () => {
                     viewport={{ once: true }}
                     transition={{ delay: itemIndex * 0.05 }}
                     whileHover={{ scale: 1.02 }}
-                    className="glass-morphism p-6 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+                    className="glass-morphism p-4 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer overflow-hidden"
                   >
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold group-hover:text-primary-400 transition-colors">
-                        {item.name}
-                      </h3>
-                      <span className="text-primary-400 font-bold text-lg">{item.price}</span>
+                    <div className="flex gap-4">
+                      {/* Menu Item Image */}
+                      <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                        <img 
+                          src={item.image} 
+                          alt={item.name}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                      
+                      {/* Menu Item Details */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex justify-between items-start mb-2">
+                          <h3 className="text-lg font-bold group-hover:text-primary-400 transition-colors line-clamp-1">
+                            {item.name}
+                          </h3>
+                          <span className="text-primary-400 font-bold text-lg ml-2 flex-shrink-0">{item.price}</span>
+                        </div>
+                        <p className="text-white/60 text-sm line-clamp-2">{item.description}</p>
+                      </div>
                     </div>
-                    <p className="text-white/60">{item.description}</p>
                   </motion.div>
                 ))}
               </div>

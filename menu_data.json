@@ -1,0 +1,1882 @@
+{
+  "Soups": [
+    {
+      "name": "Sambar Soup",
+      "price": 5.99,
+      "description": "Thick vegetable Stock made with lentils & vegetables"
+    },
+    {
+      "name": "Tomato Soup",
+      "price": 6.49,
+      "description": "Thickened puree of tomato with"
+    }
+  ],
+  "Croutons and fresh cream": [
+    {
+      "name": "Veg Sweet Corn Soup",
+      "price": 6.49,
+      "description": "Tender corn kernels and Vegetables"
+    }
+  ],
+  "simmered to a soup": [
+    {
+      "name": "Chicken Sweet Corn Soup",
+      "price": 7.49,
+      "description": "Tender corn kernels and diced chicken"
+    },
+    {
+      "name": "Hot & Sour Soup (Veg)",
+      "price": 6.49,
+      "description": "Spicy and tangy soup with Vegetables."
+    },
+    {
+      "name": "Hot & Sour Soup (Chicken)",
+      "price": 7.49,
+      "description": "Spicy and Tangy soup with sesame and chili"
+    }
+  ],
+  "flavor topped with Chicken": [],
+  "Appetizers (Vegetarian)": [
+    {
+      "name": "Vegetable Samosa {2}",
+      "price": 6.99,
+      "description": "Minced potatoes & Peas wrapped in"
+    }
+  ],
+  "pastry dough & fried": [
+    {
+      "name": "Mix Veg Pakoda",
+      "price": 12.99,
+      "description": "An Indian Classic snack with veggies coated in"
+    }
+  ],
+  "a perfectly spiced gram flour batter and": [],
+  "deep-fried until golden and crunchy.": [
+    {
+      "name": "Chilli Idli",
+      "price": 14.99,
+      "description": "A house special dish with fried idli covered in"
+    }
+  ],
+  "special sauce and sauteed with garlic and hot": [],
+  "chillies.": [
+    {
+      "name": "Crispy Corn",
+      "price": 14.99,
+      "description": "Golden - fried corn kernels tossed with onoins, chillies"
+    }
+  ],
+  "and spices for a crunchy flavourful snack.": [
+    {
+      "name": "Gobi Manchurian",
+      "price": 14.99,
+      "description": "Stir fried florets of cauliflower spiced and"
+    }
+  ],
+  "sauteed in Manchurian sauce": [
+    {
+      "name": "Karampodi Gobi",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Chicken 555",
+      "price": 16.99,
+      "description": "Deep fried chicken cooked in special"
+    }
+  ],
+  "Gobi deep-fried Sauteed to make it juicy with": [],
+  "karampodi and some herbs &spices which makes": [],
+  "it a perfect starter": [
+    {
+      "name": "Gobi 65 Dry / Wet",
+      "price": 14.99,
+      "description": "A spicy lip smacking snack receipe made with battered cauliflower tossed in sauce."
+    },
+    {
+      "name": "Pudina Gobi (Mint)",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "Lightly battered cauliflower sauteed": [
+    {
+      "name": "Pachamirchi Gobi",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Veg Manchurian",
+      "price": 14.99,
+      "description": "Mixed Vegetale dumpling cooked in"
+    }
+  ],
+  "Indo-Chinese style": [
+    {
+      "name": "Corn Manchurian",
+      "price": 14.99,
+      "description": "Stir-fried crisp tender baby corn spiced"
+    }
+  ],
+  "and sauteed in Manchurian sauce": [
+    {
+      "name": "Karampodi Corn",
+      "price": 14.99,
+      "description": "Fried Baby Corn sauteed with special herbs"
+    }
+  ],
+  "and house special kaarampodi, which makes": [],
+  "it a perfect starter.": [
+    {
+      "name": "Karampodi Idli",
+      "price": 14.99,
+      "description": "Fried Idli tossed and sauteed with house"
+    }
+  ],
+  "special karampodi to interest your appetite.": [
+    {
+      "name": "Guntur Gobi",
+      "price": 14.99,
+      "description": "Battered cauliflower tossed with spicy"
+    }
+  ],
+  "sauces & sauteed to mess with uour taste buds.": [
+    {
+      "name": "Velluli Karam Gobi",
+      "price": 14.99,
+      "description": "Battered fried cauliflower spiced and tossed"
+    }
+  ],
+  "in a powder of garlic, redchilli powder.": [
+    {
+      "name": "Karivepaku Corn (Curry Leaves)",
+      "price": 14.99,
+      "description": "Marinated Corn is fried and sauteed with"
+    },
+    {
+      "name": "Guntur Chicken",
+      "price": 16.99,
+      "description": "Boneless chicken marinated with spicy"
+    }
+  ],
+  "house special curry leaves paste, chilli powdwer,": [],
+  "lemon juice for a flavorful delicious starter.": [
+    {
+      "name": "Chilli Paneer",
+      "price": 15.49,
+      "description": "Wok tossed cubes of deep-fried paneer"
+    }
+  ],
+  "coated with tangy chilli sauce": [
+    {
+      "name": "Panneer 555",
+      "price": 15.49,
+      "description": "Paneer cooked in special sauce with"
+    }
+  ],
+  "cashew nuts": [
+    {
+      "name": "Panneer 65 Dry / Wet",
+      "price": 15.49,
+      "description": "A spicy lip smacking snack receipe made with battered paneer tossed in sauce."
+    },
+    {
+      "name": "Guntur Paneer",
+      "price": 15.49,
+      "description": "Paneer cubes marinated with spicy sauces &"
+    }
+  ],
+  "sauteed to mess with your taste buds.": [
+    {
+      "name": "Paneer Fingers",
+      "price": 15.49,
+      "description": "Paneer strips marinated in freshly ground paste,"
+    }
+  ],
+  "spices,coated with house batter and fried.": [
+    {
+      "name": "Pachamirchi Paneer",
+      "price": 15.49,
+      "description": ""
+    },
+    {
+      "name": "Fish 65 Dry / Wet",
+      "price": 17.49,
+      "description": "Battered fish fillets tossed with curry leaves and chillies"
+    }
+  ],
+  "Lightly battered paneer sauteed": [],
+  "Appetizers (Non Veg)": [
+    {
+      "name": "Chicken 65 Dry / Wet",
+      "price": 15.49,
+      "description": "Chicken 65 marinated with ground house"
+    }
+  ],
+  "made batter and deep fried and tossed in sauce.": [
+    {
+      "name": "Chicken Lollipops (Dry) {4}",
+      "price": 16.49,
+      "description": "Chicken drumsticks marinated in spices,"
+    }
+  ],
+  "coated in zesty batter, deep fried and served": [
+    {
+      "name": "Masala Lollipops chicken (4)",
+      "price": 16.99,
+      "description": "Chicken drumsticks marinated & tossed in"
+    }
+  ],
+  "masala base sauce": [
+    {
+      "name": "Chilli Chicken",
+      "price": 16.49,
+      "description": "Wok tossed cubes of deep-fried chicken,"
+    }
+  ],
+  "coated with tangy chilli sauce.": [
+    {
+      "name": "Chicken Manchurian",
+      "price": 16.99,
+      "description": "Battered fried chicken spiced and"
+    }
+  ],
+  "sauce with Cashews": [
+    {
+      "name": "Velluli Karam Kodi",
+      "price": 16.99,
+      "description": "Battered fried chicken spiced and tossed"
+    }
+  ],
+  "sauce & sauteed to mess with your taste buds": [
+    {
+      "name": "Karampodi Kodi (Chicken)",
+      "price": 16.99,
+      "description": "Boneless chicken deep fried,sauteed to make"
+    }
+  ],
+  "it juicy with karampodi and some herbs & spices": [],
+  "which makes it as a perfect starter.": [
+    {
+      "name": "Karivepaku Chicken",
+      "price": 16.99,
+      "description": "Marinated Chicken is fried with chilli powder,"
+    }
+  ],
+  "lemon juice, turmeric powder and curry leaf": [
+    {
+      "name": "Kaju Kodi Fry",
+      "price": 16.99,
+      "description": "Chicken Marinated with house spices,cashew fried"
+    }
+  ],
+  "until dry golden brown color, tastes delicious with": [],
+  "a splash of cinnamon and clove.": [
+    {
+      "name": "Chicken Majestic",
+      "price": 16.99,
+      "description": "Marinated and fried chicken tossed in"
+    }
+  ],
+  "a rich and creamy sauce": [
+    {
+      "name": "Chicken Ghee Roast",
+      "price": 16.99,
+      "description": "Chicken tossed to perfection with green chillies,"
+    }
+  ],
+  "ghee and special in-house spices.": [
+    {
+      "name": "Kothimeera Kodi (Cilantro Chicken)",
+      "price": 16.99,
+      "description": "Boneless chicken fried and tossed with green chillies, cilantro and spices."
+    },
+    {
+      "name": "Pudina Chicken (Mint)",
+      "price": 16.99,
+      "description": "Marinated and fried chicken tossed in"
+    },
+    {
+      "name": "Mutton Ghee Roast (Bone-In)",
+      "price": 18.49,
+      "description": ""
+    }
+  ],
+  "mint-based sauce and indian spices.": [
+    {
+      "name": "Chicken Pepper Fry (Boneless)",
+      "price": 16.99,
+      "description": "Chicken deep fried with king of spices"
+    }
+  ],
+  "pepper to mess with your taste buds.": [
+    {
+      "name": "Mutton Pepper Fry (Bone-In)",
+      "price": 16.99,
+      "description": "Bone-In goat fried and tossed with green chillies."
+    }
+  ],
+  "curry,house spices, and with a mix of authentic": [],
+  "chettinad masala.": [
+    {
+      "name": "Mutton Roast (Boneless)",
+      "price": 17.49,
+      "description": "Boneless goat cooked to perfection with green"
+    },
+    {
+      "name": "Mutton Ghee Roast (Boneless)",
+      "price": 18.99,
+      "description": ""
+    }
+  ],
+  "chillies, house spices, and with a mix of authentic": [],
+  "Mutton cooked to perfection with green chillies,": [],
+  "Sea Food - Appetizers": [
+    {
+      "name": "Chilli Fish",
+      "price": 17.99,
+      "description": "Wok tossed deep fried fish, coated with tangy"
+    }
+  ],
+  "chilli sauce": [
+    {
+      "name": "Apollo Fish",
+      "price": 17.99,
+      "description": ""
+    }
+  ],
+  "Crispy fried fish tossed in a yoghurt sauce with": [],
+  "green chillies and curry leaves.": [
+    {
+      "name": "Fish Finger",
+      "price": 17.49,
+      "description": ""
+    }
+  ],
+  "Fish pieces marinated in freshly ground paste,": [],
+  "in a special in-house sauce.": [
+    {
+      "name": "Chilli Shrimp",
+      "price": 18.49,
+      "description": "Wok tossed deep fried tiger prawns, coated with"
+    },
+    {
+      "name": "Guntur Shrimp",
+      "price": 18.49,
+      "description": ""
+    }
+  ],
+  "tangy chilli sauce is sure to make it happen on": [],
+  "your table.": [
+    {
+      "name": "Shrimp 65 Dry / Wet",
+      "price": 17.99,
+      "description": "Battered shrimp tossed with curry leaves and chillies"
+    }
+  ],
+  "Shrimp deep fried,sauteed to make it juicy with": [],
+  "spicy chilli sauce and some herbs & spices which": [],
+  "makes it as a perfect starter.": [
+    {
+      "name": "Kaarampodi Shrimp",
+      "price": 18.49,
+      "description": ""
+    }
+  ],
+  "Prawns deep fried and cooked with": [],
+  "Indian made spice powder for perfect taste.": [
+    {
+      "name": "Velluli Karam Shrimp",
+      "price": 18.49,
+      "description": "Battered fried shrimp spiced and tossed"
+    }
+  ],
+  "Tandoori (Clay oven) Sizzlers": [
+    {
+      "name": "Paneer Tikka Kabab",
+      "price": 16.49,
+      "description": ""
+    }
+  ],
+  "The Indian spice powders mixed with the": [],
+  "yogurt [curd] make a flavorful marinade": [],
+  "that is soaked up by the porous panner cubes": [],
+  "and Grilled on tandoori oven": [
+    {
+      "name": "Chicken Tikka Kabab",
+      "price": 16.99,
+      "description": "Chicken breast marinated with spices & yogurt"
+    }
+  ],
+  "and grilled in our clay oven.": [
+    {
+      "name": "Murgh Malai kabab",
+      "price": 16.99,
+      "description": "Boneless chicken marinated in chef's"
+    }
+  ],
+  "secret creamy garlic sauce.": [
+    {
+      "name": "Tandoori Chicken (Half)",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "Roasting the chicken marinated in yogurt along": [],
+  "clay oven": [
+    {
+      "name": "Tandoori Chicken (Full)",
+      "price": 24.99,
+      "description": ""
+    },
+    {
+      "name": "Tandoori Pomfret (Fish)",
+      "price": 18.49,
+      "description": ""
+    }
+  ],
+  "Whole fish marinated in yogurt sauce & grilled": [],
+  "in clay oven.": [
+    {
+      "name": "Bawarchi Tandoori Mix Grill",
+      "price": 25.99,
+      "description": ""
+    }
+  ],
+  "Combination of Tandoori Chicken, Malai kabab,": [],
+  "South Indian Specials": [
+    {
+      "name": "Idli {2}",
+      "price": 6.99,
+      "description": ""
+    }
+  ],
+  "Steamed rice cake served with sides of sambar": [],
+  "and chutneys": [
+    {
+      "name": "Sambar Idli {2}",
+      "price": 7.49,
+      "description": ""
+    }
+  ],
+  "Steamed rice cake served in a bowl of sambar": [
+    {
+      "name": "Babai Idli {2}",
+      "price": 7.99,
+      "description": ""
+    }
+  ],
+  "Steamed rice and lentil patties served with": [],
+  "gunpowder & ghee": [
+    {
+      "name": "Idli Vada",
+      "price": 6.99,
+      "description": ""
+    }
+  ],
+  "One rice cake & one lentil donut served with": [],
+  "sambar & chutneys.": [
+    {
+      "name": "Medu Vada {2}",
+      "price": 6.99,
+      "description": "Deep fried donuts made with lentil flour served with sambar & chutneys"
+    },
+    {
+      "name": "Sambar Vada {2}",
+      "price": 7.49,
+      "description": "Fried lentil donuts served in a bowl of sambar"
+    }
+  ],
+  "Dosa Specials": [
+    {
+      "name": "Plain Dosa",
+      "price": 9.49,
+      "description": ""
+    }
+  ],
+  "Crepe made with fermented lentil flour": [
+    {
+      "name": "Onion Dosa",
+      "price": 10.49,
+      "description": ""
+    }
+  ],
+  "Savoury crepe stuffed with Onions & Chilies": [
+    {
+      "name": "Masala Dosa",
+      "price": 11.49,
+      "description": ""
+    }
+  ],
+  "Savoury crepe filed with mildly spiced mashed": [],
+  "pototoes": [
+    {
+      "name": "Mysore Masala Dosa",
+      "price": 12.49,
+      "description": "Spicy chutney spread on thin rice and lentil"
+    }
+  ],
+  "crepe with potatoes": [
+    {
+      "name": "Chocolate Dosa",
+      "price": 11.49,
+      "description": ""
+    }
+  ],
+  "Savoury crepe topped with chocolate sauce": [
+    {
+      "name": "Ghee Dosa",
+      "price": 11.49,
+      "description": ""
+    }
+  ],
+  "Crepe made with ghee, served with lentil": [],
+  "soup and chutneys.": [
+    {
+      "name": "Guntur Karam Dosa",
+      "price": 12.49,
+      "description": ""
+    }
+  ],
+  "Savoury crepe topped with chilli paste": [
+    {
+      "name": "Podi Dosa",
+      "price": 12.49,
+      "description": ""
+    }
+  ],
+  "Savoury crepe topped with podi made from lentils.": [
+    {
+      "name": "Paneer Tikka Dosa",
+      "price": 13.99,
+      "description": ""
+    }
+  ],
+  "Medium crepe stuffed with paneer & Vegetables.": [
+    {
+      "name": "Rava Dosa (min 15 mins)",
+      "price": 13.99,
+      "description": ""
+    }
+  ],
+  "Fine Semolina takes the place of rice to yield": [],
+  "a uniquely delicious crepe.": [
+    {
+      "name": "Rava Onion Dosa (min 15 mins)",
+      "price": 14.49,
+      "description": ""
+    }
+  ],
+  "Fine semolina crepe sprinkled with lightly": [],
+  "fried chopped onions.": [
+    {
+      "name": "Rava Masala Dosa (min 15 mins)",
+      "price": 14.49,
+      "description": ""
+    }
+  ],
+  "Fine semolina crepe stuffed with mildly spiced": [],
+  "mashed potatoes.": [
+    {
+      "name": "Egg Dosa",
+      "price": 12.99,
+      "description": ""
+    }
+  ],
+  "Savoury crepe topped with egg": [
+    {
+      "name": "Chicken Dosa",
+      "price": 14.99,
+      "description": "Spicy crepe stuffed with Chicken"
+    },
+    {
+      "name": "Chicken Tikka Dosa",
+      "price": 14.99,
+      "description": "Spicy crepe stuffed with chicken and vegetables."
+    }
+  ],
+  "Bawarchi Dosa Specials": [
+    {
+      "name": "70 MM Dosa (Dine in Only)",
+      "price": 12.99,
+      "description": ""
+    }
+  ],
+  "Double sized plain savoury crepe served with": [],
+  "chutneys and sambar.": [
+    {
+      "name": "70 MM Onion Dosa (Dine in Only)",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "Double sized plain savoury crepe stuffed with": [],
+  "onions served with chutneys and sambar.": [
+    {
+      "name": "70 MM Masala Dosa (Dine in Only)",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "Double sized plain savoury crepe filled with": [],
+  "mildly spiced mashed potatoes": [],
+  "Uthappams (Min 20 mins)": [
+    {
+      "name": "Plain Uthappam",
+      "price": 9.99,
+      "description": "Thick pancake made with lentil & rice flours"
+    },
+    {
+      "name": "Onion Uthappam",
+      "price": 10.49,
+      "description": "Thick pancake made with lentil & rice flours with Onions."
+    },
+    {
+      "name": "Chilli Onion Uthappam",
+      "price": 11.49,
+      "description": "Thick pancake made with lentil & rice flours with chillies & onions"
+    },
+    {
+      "name": "Mix Veg Uthappam",
+      "price": 11.49,
+      "description": "Thick pancake made with lentil & rice flours with mixed vegetables"
+    },
+    {
+      "name": "Ghee Podi Uthappam",
+      "price": 11.49,
+      "description": "Thick crispy Pancake generously drizzeled with ghee"
+    }
+  ],
+  "and spicy, flavorful podi.": [
+    {
+      "name": "Curd Rice",
+      "price": 8.49,
+      "description": ""
+    }
+  ],
+  "Yogurt rice with Onions and spices": [],
+  "Entrees (Vegetarian)": [],
+  "(Butter/ Garlic Naan - Add $0.50 cents )": [
+    {
+      "name": "Dal Tadka",
+      "price": 14.99,
+      "description": "A rich blend of split red and yellow gram"
+    }
+  ],
+  "garnished with coriander leaves and butter": [
+    {
+      "name": "Dal Makhani",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Urad beans simmered in creamy gravy": [],
+  "saut\u00e9ed with tomatoes onions and mild": [],
+  "spices.": [
+    {
+      "name": "Chana Masala",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "Chickpeas cooked with tomatoes in": [],
+  "traditional north Indian style.": [
+    {
+      "name": "Aloo Gobi Masala",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Potatoes and cauliflower cooked in to": [],
+  "taste delicious Punjabi style": [
+    {
+      "name": "Vegetable Korma",
+      "price": 15.99,
+      "description": "Mixed vegetables cooked in delicious"
+    }
+  ],
+  "creamy gravy": [
+    {
+      "name": "Kadai Vegetable",
+      "price": 15.99,
+      "description": "Mixed vegetables cooked in delicious"
+    }
+  ],
+  "sauce with bell pepper and onions.": [
+    {
+      "name": "Chettinadu Vegetable Curry",
+      "price": 15.99,
+      "description": "A spicy south Indian mixed vegetable curry made with special chettinadu masala ."
+    },
+    {
+      "name": "Masala Bhindi (okra)",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Made with okra, onions, tomatoes tossed": [
+    {
+      "name": "Gutti Vankay Curry (Egg Plant)",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Eggplant cooked with sesame seeds,": [],
+  "peanut and yogurt blended gravy": [
+    {
+      "name": "Amaravati Vegetable Curry",
+      "price": 16.99,
+      "description": ""
+    }
+  ],
+  "Vegetables cooked with spicy chilli paste and spices": [
+    {
+      "name": "Avakai Vegetable Curry",
+      "price": 16.99,
+      "description": ""
+    }
+  ],
+  "Vegetables cooked with Mango to make it tangy": [],
+  "and spicy for different region specific taste.": [
+    {
+      "name": "Malai Kofta",
+      "price": 16.99,
+      "description": "Fried vegetables balls simmered in mild creamy Shahi gravy."
+    },
+    {
+      "name": "Paneer Butter Masala",
+      "price": 16.99,
+      "description": ""
+    }
+  ],
+  "Cottage cheese cooked in a rich butter": [],
+  "cream sauce": [
+    {
+      "name": "Saag Paneer (Spinach)",
+      "price": 17.49,
+      "description": ""
+    }
+  ],
+  "Cottage cheese cooked in spinach puree": [
+    {
+      "name": "Paneer Tikka Masala",
+      "price": 16.99,
+      "description": ""
+    }
+  ],
+  "Homemade cheese cubes cooked with bell": [],
+  "peppers, onions in tomato sauce with a touch of cream.": [
+    {
+      "name": "Shahi Paneer",
+      "price": 17.49,
+      "description": ""
+    }
+  ],
+  "Pieces of paneer cooked in delicious creamy": [],
+  "gravy with cashew paste": [
+    {
+      "name": "Kadai Paneer",
+      "price": 17.49,
+      "description": "Paneer pieces cooked in delicious creamy gravy with tomatoes and onions gravy"
+    },
+    {
+      "name": "Channa Palak (Spinach)",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Channa (garbanzo beans) & spinach": [],
+  "cooked in cream with onions, tomatoes,": [],
+  "and spices for taste and flavour.": [],
+  "Entrees (Non Vegetarian)": [],
+  "(Butter/Garlic Naan - Add $0.50 cents )": [
+    {
+      "name": "Gobi Manchurian (Wet)",
+      "price": 14.99,
+      "description": "Battered cauliflower fried and saut\u00e9ed with"
+    }
+  ],
+  "Egg": [
+    {
+      "name": "Egg Masala",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Curried boiled eggs simmered in spiced": [],
+  "aromatic gravy.": [
+    {
+      "name": "Egg Korma",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Egg kurma is a delicious and very flavorful": [],
+  "thick gravy prepared by cooking eggs in spicy coconut mixture": [],
+  "coconut mixtre": [
+    {
+      "name": "Ulavacharu Egg Curry",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Boiled egg cooked with Ulavacharu with a mix of herbs and spices": [
+    {
+      "name": "Chettinad Egg Curry",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Boiled Eggs simmered in a rich, spicy gravy": [],
+  "made with freshly ground Chettinad masala.": [
+    {
+      "name": "Egg Pepper Masala",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Boiled egg cooked with ground spices": [],
+  "and special pepper masala.": [
+    {
+      "name": "Kadai Chicken",
+      "price": 17.49,
+      "description": "Chicken pieces cooked in delicious creamy"
+    },
+    {
+      "name": "Andhra Chicken Curry (Bone-In)",
+      "price": 17.49,
+      "description": ""
+    },
+    {
+      "name": "Mutton Mughlai",
+      "price": 19.49,
+      "description": ""
+    },
+    {
+      "name": "Lamb Chettinadu",
+      "price": 19.49,
+      "description": ""
+    }
+  ],
+  "gravy with tomatoes and onions gravy": [
+    {
+      "name": "Chicken Vindaloo",
+      "price": 17.49,
+      "description": "Chicken cooked with potatoes and spice herbs"
+    },
+    {
+      "name": "Karaikudi Chicken",
+      "price": 17.49,
+      "description": ""
+    }
+  ],
+  "Aromatic Chicken seasoned with our special": [],
+  "spices with onions & tomatoes.": [
+    {
+      "name": "Chicken Pepper Masala",
+      "price": 17.49,
+      "description": "Tender chicken cooked with ground spices"
+    }
+  ],
+  "Bone-in Chicken cooked with our special": [],
+  "spices for firey aromatic andhra style flavour.": [
+    {
+      "name": "Hyderabad Chicken Curry",
+      "price": 17.49,
+      "description": ""
+    }
+  ],
+  "Nizam Special dish, boneless chicken finished": [
+    {
+      "name": "Chicken Shahi Korma",
+      "price": 17.49,
+      "description": "A true Mughlai delight, lightly sweet and spicy with flavor of cardamoms"
+    },
+    {
+      "name": "Ulavacharu Chicken Curry",
+      "price": 18.49,
+      "description": "Chicken Cooked with Onions,"
+    }
+  ],
+  "Horse gram soup and spices": [
+    {
+      "name": "Butter Chicken",
+      "price": 17.49,
+      "description": "Chicken marinated in yoghurt and spices, cooked"
+    }
+  ],
+  "in tomato puree and cream.": [
+    {
+      "name": "Chicken Tikka Masala",
+      "price": 17.49,
+      "description": "Chicken tikka cooked in rich fenugreek flavored"
+    }
+  ],
+  "tomato gravy.": [
+    {
+      "name": "Chicken Mughlai",
+      "price": 17.99,
+      "description": ""
+    }
+  ],
+  "Pieces of chicken in delicious creamy gravy with": [],
+  "egg and coriander A northwest frontier specialty": [],
+  "chicken cooked with fried curry leaves, onions": [],
+  "peppers & spices": [
+    {
+      "name": "Amaravati Chicken Curry",
+      "price": 17.99,
+      "description": "Tender Chicken cooked with spicy Indian spices"
+    }
+  ],
+  "made with a Bawarchi spicy sauce and a hint of": [],
+  "coconut for a divine taste": [
+    {
+      "name": "Gongura Chicken Curry",
+      "price": 17.99,
+      "description": ""
+    }
+  ],
+  "Andhra delicacy chicken cooked with (Red Sorrel)": [],
+  "Gongura leaves & spices": [],
+  "Mutton (Goat)": [
+    {
+      "name": "Goat Korma",
+      "price": 18.49,
+      "description": ""
+    }
+  ],
+  "Mughal delight Goat cooked & Simmered": [],
+  "in creamy sauce with traditional spices &": [],
+  "flavor of cardamoms.": [
+    {
+      "name": "Mutton Pepper Masala",
+      "price": 18.49,
+      "description": "Tender mutton cooked with ground spices"
+    }
+  ],
+  "Pieces of goat in delicious creamy gravy": [
+    {
+      "name": "Mutton Vindaloo  (Goat)",
+      "price": 18.49,
+      "description": "A tangy spicy curry cooked with baby goat,"
+    }
+  ],
+  "potato and special spices": [
+    {
+      "name": "Mutton Masala",
+      "price": 19.49,
+      "description": ""
+    }
+  ],
+  "Goat cooked in fresh ground spices with": [],
+  "onions & tomato gravy": [
+    {
+      "name": "Hyderabad Goat Curry",
+      "price": 19.49,
+      "description": ""
+    },
+    {
+      "name": "Amaravati Royyala Kura",
+      "price": 19.99,
+      "description": "Tender Shrimp cooked with spicy Indian spices"
+    }
+  ],
+  "Hyderabad Goat Curry is cooked with": [],
+  "roasted dry spices made into a paste with Tomato paste": [
+    {
+      "name": "Karaikudi Goat Curry",
+      "price": 19.49,
+      "description": ""
+    }
+  ],
+  "Aromatic Goat meat seassoned with our": [],
+  "special spices,onions & tomatoes.": [
+    {
+      "name": "Gongura Mutton Curry",
+      "price": 19.49,
+      "description": ""
+    }
+  ],
+  "Traditional goat cooked with gongura": [],
+  "[red sorrel] leaves & special spices": [
+    {
+      "name": "Amaravati Mutton Curry",
+      "price": 19.49,
+      "description": "Tender Goat cooked with spicy Indian spices"
+    }
+  ],
+  "made with a Bawarchi spicy sauce and a": [],
+  "hint of coconut for a divine taste": [
+    {
+      "name": "Ulavacharu Goat Curry",
+      "price": 19.99,
+      "description": ""
+    },
+    {
+      "name": "Avakai Royyala Iguru",
+      "price": 19.99,
+      "description": "Tender Shrimp cooked with spicy Indian spices"
+    }
+  ],
+  "Goat cooked with Onions, Horse gram": [],
+  "Soup and spices": [],
+  "Lamb": [
+    {
+      "name": "Lamb Rogan Gosh",
+      "price": 19.49,
+      "description": "Tender lamb pieces simmered in a tomato and"
+    }
+  ],
+  "onion gravy": [
+    {
+      "name": "Lamb Korma",
+      "price": 19.49,
+      "description": ""
+    }
+  ],
+  "Diced lamb cooked in a mild cashew nut sauce": [],
+  "flavored with fresh herb & spices and a touch": [],
+  "of cream": [
+    {
+      "name": "Kadai Lamb",
+      "price": 19.49,
+      "description": "A northwest frontier specialty Lamb cooked with"
+    }
+  ],
+  "onions, peppers & spices.": [
+    {
+      "name": "Lamb Vindaloo",
+      "price": 19.49,
+      "description": ""
+    }
+  ],
+  "Lamb cooked with potatoes and spice herbs": [
+    {
+      "name": "Lamb Saag",
+      "price": 19.49,
+      "description": ""
+    }
+  ],
+  "Nicely spiced lamb curry with spinach,": [],
+  "green chillies & cilantro.": [
+    {
+      "name": "Lamb Pepper Masala",
+      "price": 19.49,
+      "description": "Tender mutton cooked with ground spices"
+    }
+  ],
+  "Aromatic Lamb meat seassoned with our": [],
+  "Seafood": [
+    {
+      "name": "Fish Masala",
+      "price": 17.99,
+      "description": "Marinated fish cooked with fried onions, green"
+    }
+  ],
+  "chillies and tomatoes.": [
+    {
+      "name": "Fish Chettinadu Curry",
+      "price": 17.99,
+      "description": ""
+    }
+  ],
+  "Fresh fish fillets cooked with special chettinadu": [],
+  "masala for a spicy aromatic flavour.": [
+    {
+      "name": "Fish Pulusu",
+      "price": 17.99,
+      "description": ""
+    }
+  ],
+  "Fish cooked in hot Andhra spices made": [],
+  "and hint of coconut.": [
+    {
+      "name": "Shrimp Iguru",
+      "price": 19.99,
+      "description": ""
+    }
+  ],
+  "Shrimp cooked in delicately ground spices with": [],
+  "made with a Bawarchi secret spicy sauce and a": [],
+  "Indo Chinese Specialties": [
+    {
+      "name": "Veg Hakka Noodles",
+      "price": 13.99,
+      "description": ""
+    }
+  ],
+  "Noodles stir fried with veggies & spices": [
+    {
+      "name": "Egg Hakka Noodles",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "Noodles stir fried with egg, veggies & spices": [
+    {
+      "name": "Chicken Hakka Noodles",
+      "price": 15.49,
+      "description": ""
+    }
+  ],
+  "Noodles stir fried with chicken, egg, veggies & spices": [
+    {
+      "name": "Shrimp Hakka Noodles",
+      "price": 16.99,
+      "description": ""
+    }
+  ],
+  "Noodles stir fried with shrimp, egg, veggies & spices": [
+    {
+      "name": "Veg Fried Rice",
+      "price": 13.49,
+      "description": ""
+    }
+  ],
+  "Aromatic rice stir fried with fine chopped cabbage,": [],
+  "carrots, bell peppers & veggies": [
+    {
+      "name": "Egg Fried Rice",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Chicken Fried Rice",
+      "price": 15.49,
+      "description": ""
+    }
+  ],
+  "carrots, bell peppers, veggies & chicken": [
+    {
+      "name": "Shrimp Fried Rice",
+      "price": 16.99,
+      "description": ""
+    }
+  ],
+  "carrots, bell peppers, veggies & shrimp": [
+    {
+      "name": "Egg Schezwan Fried Rice",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Aromatic rice stir-fried with egg, veggies & spices": [],
+  "Schezwan spicy sauce": [
+    {
+      "name": "Veg Schezwan Fried Rice",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Chicken Schezwan Fried Rice",
+      "price": 16.99,
+      "description": ""
+    },
+    {
+      "name": "Shrimp Schezwan Fried Rice",
+      "price": 17.99,
+      "description": ""
+    }
+  ],
+  "Aromatic rice stir-fried with veggies & spices": [],
+  "Aromatic rice stir-fried with veggies & spices, chicken": [],
+  "Aromatic rice stir-fried with veggies & spices, shrimp": [],
+  "Veg Noodles &": [
+    {
+      "name": "Veg Fried Rice Fusion",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "Combination of Noodles and Fried rice": [
+    {
+      "name": "Chicken Fried Rice Fusion",
+      "price": 16.99,
+      "description": ""
+    }
+  ],
+  "Egg Noodles &": [
+    {
+      "name": "Egg Fried Rice Fusion",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Shrimp Noodles &": [
+    {
+      "name": "Shrimp Fried Rice Fusion",
+      "price": 17.99,
+      "description": ""
+    }
+  ],
+  "Indo Chinese Entrees": [],
+  "bell peppers,onoins and Manchurian sauce": [
+    {
+      "name": "Chicken Manchurian (Wet)",
+      "price": 17.99,
+      "description": "Battered chicken fried and saut\u00e9ed with"
+    },
+    {
+      "name": "Chilli Chicken (Wet)",
+      "price": 14.99,
+      "description": "Wok tossed cubes of deep-fried chicken,"
+    }
+  ],
+  "coated with manchurian sauce.": [
+    {
+      "name": "Veg Manchurian (Wet)",
+      "price": 14.99,
+      "description": "Battered vegetables fried and saut\u00e9ed with"
+    }
+  ],
+  "North Indian Specials": [
+    {
+      "name": "Poori Bhaji {2}",
+      "price": 10.99,
+      "description": ""
+    }
+  ],
+  "Pieces of puffed wheat bread served with potato curry": [
+    {
+      "name": "Chole poori {2}",
+      "price": 11.99,
+      "description": "Pieces of puffed wheat bread served with"
+    }
+  ],
+  "garbanzo bean curry": [
+    {
+      "name": "Chole Batura {1}",
+      "price": 11.99,
+      "description": ""
+    }
+  ],
+  "Pufffed bread served with garbanzo bean curry": [],
+  "Chaat Corner": [
+    {
+      "name": "Pav Bhaji",
+      "price": 9.49,
+      "description": "Spicy mixed vegetable curry served with bread, leamon & Onions"
+    },
+    {
+      "name": "Samosa Chaat",
+      "price": 9.49,
+      "description": ""
+    }
+  ],
+  "Veg samosa mashed and topped with": [],
+  "garbanzo, tamarind chutney, & roti crisps": [
+    {
+      "name": "Pani Puri",
+      "price": 8.99,
+      "description": ""
+    }
+  ],
+  "Side Orders": [
+    {
+      "name": "Rice",
+      "price": 3.99,
+      "description": ""
+    },
+    {
+      "name": "Masala Rice",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Pulav Rice",
+      "price": 6.99,
+      "description": ""
+    },
+    {
+      "name": "Plain Naan",
+      "price": 2.99,
+      "description": ""
+    },
+    {
+      "name": "Butter Naan",
+      "price": 3.49,
+      "description": ""
+    },
+    {
+      "name": "Tandoori Roti",
+      "price": 3.49,
+      "description": ""
+    },
+    {
+      "name": "Garlic Naan",
+      "price": 4.49,
+      "description": ""
+    },
+    {
+      "name": "Chilli Naan",
+      "price": 3.99,
+      "description": ""
+    },
+    {
+      "name": "Onion Kulcha",
+      "price": 4.49,
+      "description": ""
+    },
+    {
+      "name": "Boiled Eggs (2pcs)",
+      "price": 1.99,
+      "description": ""
+    },
+    {
+      "name": "Raita / Salan",
+      "price": 1.0,
+      "description": ""
+    },
+    {
+      "name": "Extra Chutney",
+      "price": 1.0,
+      "description": ""
+    },
+    {
+      "name": "Extra Sambar",
+      "price": 1.0,
+      "description": ""
+    },
+    {
+      "name": "Onion Salad",
+      "price": 3.99,
+      "description": ""
+    }
+  ],
+  "Onion, Chilli and lemon Slices": [
+    {
+      "name": "Bread Basket",
+      "price": 14.99,
+      "description": ""
+    }
+  ],
+  "(Tandoori Roti, Garlic Naan, Plain Naan, Onion Kulcha)": [],
+  "Kids Menu": [
+    {
+      "name": "Mini Chocolate Dosa",
+      "price": 6.99,
+      "description": ""
+    },
+    {
+      "name": "Min Panner Dosa",
+      "price": 6.99,
+      "description": ""
+    },
+    {
+      "name": "Mini Dosa",
+      "price": 6.49,
+      "description": ""
+    },
+    {
+      "name": "Mini Poori",
+      "price": 6.99,
+      "description": ""
+    },
+    {
+      "name": "Mini Noodles - Veg/Egg/Chicken",
+      "price": 7.49,
+      "description": ""
+    },
+    {
+      "name": "Mini Fried rice - Veg/Egg/Chicken",
+      "price": 7.49,
+      "description": ""
+    },
+    {
+      "name": "French Fries",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Chicken Nuggets (5 pcs)",
+      "price": 5.99,
+      "description": ""
+    },
+    {
+      "name": "Spring Roll (5 pcs)",
+      "price": 5.99,
+      "description": ""
+    },
+    {
+      "name": "Chicken Nuggets (5 pcs) with Fries",
+      "price": 9.99,
+      "description": ""
+    }
+  ],
+  "Deserts": [
+    {
+      "name": "Gulab Jamun",
+      "price": 4.99,
+      "description": ""
+    }
+  ],
+  "Traditional deep fried milk pastry served": [],
+  "in rose water honey syrup": [
+    {
+      "name": "Rasmalai",
+      "price": 5.49,
+      "description": ""
+    }
+  ],
+  "Homemade cheese patties served in cold": [],
+  "Sweetened milk": [
+    {
+      "name": "Mango Malai",
+      "price": 5.99,
+      "description": ""
+    }
+  ],
+  "Homemade cheese patties with mango flavour": [
+    {
+      "name": "served in cold sweetened milk",
+      "price": 3.25,
+      "description": ""
+    }
+  ],
+  "Bevarages Hot": [
+    {
+      "name": "Indian Coffee",
+      "price": 3.75,
+      "description": ""
+    }
+  ],
+  "Brewed with hot milk": [
+    {
+      "name": "Indian Masala Tea (Chai)",
+      "price": 3.99,
+      "description": ""
+    }
+  ],
+  "Spiced Indian tea brewed with milk": [],
+  "Beverages Cold": [
+    {
+      "name": "Water Bottle",
+      "price": 2.49,
+      "description": ""
+    },
+    {
+      "name": "Sweet Lassi",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Salt Lassi",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Mango Lassi",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Soda Can",
+      "price": 2.49,
+      "description": ""
+    },
+    {
+      "name": "Chikku Juice",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Thums Up (or) Limca",
+      "price": 3.49,
+      "description": ""
+    },
+    {
+      "name": "Badam Milk",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Butter Milk",
+      "price": 4.99,
+      "description": ""
+    },
+    {
+      "name": "Falooda Shake",
+      "price": 5.99,
+      "description": ""
+    },
+    {
+      "name": "Strawberry Shake",
+      "price": 5.99,
+      "description": ""
+    },
+    {
+      "name": "Mango Shake",
+      "price": 5.99,
+      "description": ""
+    },
+    {
+      "name": "Vanilla Shake",
+      "price": 5.99,
+      "description": ""
+    },
+    {
+      "name": "Chocolate Shake",
+      "price": 5.99,
+      "description": ""
+    },
+    {
+      "name": "Oreo Shake",
+      "price": 5.99,
+      "description": ""
+    }
+  ],
+  "Ice Cream & Kulfi": [
+    {
+      "name": "Ice Cream Double Scoop {Ask for Flavours}",
+      "price": 6.99,
+      "description": ""
+    },
+    {
+      "name": "Malai Single",
+      "price": 2.99,
+      "description": ""
+    },
+    {
+      "name": "Rabdi Malai Single",
+      "price": 3.99,
+      "description": ""
+    },
+    {
+      "name": "Pista Single",
+      "price": 2.99,
+      "description": ""
+    },
+    {
+      "name": "Mango Single",
+      "price": 2.99,
+      "description": ""
+    },
+    {
+      "name": "Family Pack Kulfi (6 Nos)",
+      "price": 7.99,
+      "description": ""
+    },
+    {
+      "name": "Matka Kulfi Single",
+      "price": 4.49,
+      "description": ""
+    },
+    {
+      "name": "Matka Kulfi (2 Nos)",
+      "price": 7.99,
+      "description": ""
+    }
+  ],
+  "Bawarchi Express (4pm - 6pm Menu)": [
+    {
+      "name": "Hyderabadi Mirchi Bajji (2)",
+      "price": 6.99,
+      "description": ""
+    }
+  ],
+  "Green chilies fried with spiced besan flour": [
+    {
+      "name": "Cut Mirchi Bajji (6)",
+      "price": 6.99,
+      "description": ""
+    }
+  ],
+  "Jalapenos deep fried with spiced chick pea flour": [
+    {
+      "name": "Punugulu",
+      "price": 6.49,
+      "description": "Deep fried small balls of rice flour with urad dal"
+    },
+    {
+      "name": "Masala Vada (2)",
+      "price": 5.49,
+      "description": "Deep fried patties made with split pea flour"
+    },
+    {
+      "name": "Onion Pakora",
+      "price": 6.99,
+      "description": ""
+    }
+  ],
+  "Onions dipped in batter & fried": [],
+  "thalis": [
+    {
+      "name": "Veg Thali",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Non- Veg Thali",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "Weekend Specials": [],
+  "NON-VEG DOSA": [
+    {
+      "name": "Dosa with Chicken Curry",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Dosa with Goat Curry",
+      "price": 15.99,
+      "description": ""
+    }
+  ],
+  "BIRIYANIS/PULAV": [
+    {
+      "name": "Natukodi Fry Biryani",
+      "price": 17.99,
+      "description": ""
+    },
+    {
+      "name": "Natukodi Iguru Pulav",
+      "price": 17.99,
+      "description": ""
+    },
+    {
+      "name": "Gongura Goat Fry Biryani",
+      "price": 18.99,
+      "description": ""
+    },
+    {
+      "name": "Rayalaseema Royyala (Shrimp) Pulav",
+      "price": 18.49,
+      "description": ""
+    },
+    {
+      "name": "Gongura Mutton Pulav",
+      "price": 18.99,
+      "description": ""
+    },
+    {
+      "name": "Rajugari Royalla (Shrimp) Fry Biryani",
+      "price": 18.49,
+      "description": ""
+    }
+  ],
+  "ENTREES": [
+    {
+      "name": "Natukodi (Country Chicken) Fry",
+      "price": 16.49,
+      "description": ""
+    },
+    {
+      "name": "Gongura Mutton Fry (with Bone)",
+      "price": 17.49,
+      "description": ""
+    },
+    {
+      "name": "Royyala Vepudu (Shrimp Fry)",
+      "price": 18.49,
+      "description": "Bawarchi Biryanis (Family Pack Take Out Only)"
+    },
+    {
+      "name": "Hyderabadi Veg Dum Biryani",
+      "price": 13.99,
+      "description": ""
+    },
+    {
+      "name": "Aavakai Veg Dum Biryani",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Guthi Vankaya Dum Biryani",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Ulavacharu Veg.Dum Biryani",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Temper Veg Dum Biryani",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Gongura Veg Dum Biryani",
+      "price": 15.49,
+      "description": ""
+    },
+    {
+      "name": "Panner Biryani",
+      "price": 15.49,
+      "description": ""
+    },
+    {
+      "name": "Paneer Veg Dum Biryani",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Panner Tikka Biryani",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Vijaywada Paneer Biryani",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Pachamirchi Paneer Biryani",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Paneer Ghee Roast Biryani",
+      "price": 16.99,
+      "description": ""
+    },
+    {
+      "name": "Jackfruit Ghee Roast Biryani",
+      "price": 16.99,
+      "description": ""
+    },
+    {
+      "name": "Egg Biryani",
+      "price": 13.99,
+      "description": ""
+    },
+    {
+      "name": "Egg Ghee Roast Biryani",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Ulavacharu Egg Biryani",
+      "price": 15.49,
+      "description": ""
+    },
+    {
+      "name": "Vijaywada Egg Biryani",
+      "price": 15.49,
+      "description": ""
+    },
+    {
+      "name": "Pachamirchi Egg Biryani",
+      "price": 15.49,
+      "description": ""
+    }
+  ],
+  "": [],
+  "Pulavs": [
+    {
+      "name": "Nalli Gosht Pulav",
+      "price": 21.99,
+      "description": ""
+    },
+    {
+      "name": "Natukodi Pulav",
+      "price": 17.99,
+      "description": ""
+    },
+    {
+      "name": "Mutton Ghee Roast Pulav",
+      "price": 19.49,
+      "description": ""
+    },
+    {
+      "name": "Chicken Ghee Roast Pulav",
+      "price": 18.99,
+      "description": ""
+    },
+    {
+      "name": "Paneer Ghee Roast Pulav",
+      "price": 16.99,
+      "description": ""
+    },
+    {
+      "name": "Jackfruit Pulav",
+      "price": 16.99,
+      "description": ""
+    },
+    {
+      "name": "Guthi Vankaya Pulav",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Pachamirchi Paneer Pulav",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Shrimp Ghee Roast Pulav",
+      "price": 18.99,
+      "description": ""
+    }
+  ],
+  "Buy One Get One free Biryani (take out only)": [
+    {
+      "name": "Hyderabadi Veg Dum Biryani",
+      "price": 13.49,
+      "description": ""
+    },
+    {
+      "name": "Aavakai Veg Dum Biryani",
+      "price": 14.49,
+      "description": ""
+    },
+    {
+      "name": "Temper Veg Dum Biryani",
+      "price": 14.49,
+      "description": ""
+    },
+    {
+      "name": "Gongura Veg Dum Biryani",
+      "price": 14.49,
+      "description": ""
+    },
+    {
+      "name": "Hyderabadi Goat Dum Biryani",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Hyderabadi Chicken  Dum Biryani",
+      "price": 14.49,
+      "description": ""
+    },
+    {
+      "name": "Aavakai Chicken Dum Biryani",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Temper Chicken Dum Biryani",
+      "price": 14.99,
+      "description": ""
+    },
+    {
+      "name": "Gongura Chicken Dum Biryani",
+      "price": 15.99,
+      "description": ""
+    },
+    {
+      "name": "Boneless Chicken Biryani",
+      "price": 15.49,
+      "description": ""
+    },
+    {
+      "name": "Vijaywada Spl.Bnls. Chicken Biryani",
+      "price": 15.49,
+      "description": ""
+    },
+    {
+      "name": "Paneer Biryani",
+      "price": 14.49,
+      "description": ""
+    },
+    {
+      "name": "Vijaywada Paneer Biryani",
+      "price": 14.49,
+      "description": ""
+    }
+  ]
+}
