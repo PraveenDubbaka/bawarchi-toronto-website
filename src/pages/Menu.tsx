@@ -1,121 +1,130 @@
 import { motion } from 'framer-motion';
 import { ChefHat, Flame, Leaf } from 'lucide-react';
 
-// Image mapping - Using only verified images that match the dish
+// Image mapping - Manually curated for accuracy based on actual image content
 const getMenuItemImage = (itemName: string): string => {
-  // Exact match images first - these we KNOW are correct
-  const exactMatches: { [key: string]: string } = {
-    // Explicit named dishes
-    'Garlic Naan': '/images/Food Pic/Garlic Naan.png',
-    'Gobi 65 Dry / Wet': '/images/Food Pic/Gobi 65.png',
-    'Hyderabadi Veg Dum Biryani': '/images/Food Pic/Guthi Vankaya Biryani.png',
-    'Masala Lollipops (Chicken)': '/images/Food Pic/Masala Lollipops (Chicken).png',
-    'Paneer Butter Masala': '/images/Food Pic/Panner Butter Masala.png',
-    'Sweet Corn Soup': '/images/Food Pic/Sweet Corn Soup.png',
-    'Tandoori Pomfret (Fish)': '/images/Food Pic/Tandoori Pomfret.png',
-    'Veg Fried Rice': '/images/Food Pic/Veg Fried Rice.png',
-    'Veg Machurian': '/images/Food Pic/Veg Machurian.png',
-    'Veg Manchurian (Wet)': '/images/Food Pic/Veg Manchurian Wet.png',
-    'Veg Schezwan Noodles': '/images/Food Pic/Veg Schezwan Noodles.png',
-    
-    'Hyd Chicken Dum Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
-    'Chicken Lollipop Dry / Wet': '/images/Food Pic/Chicken Lollipops.jpeg',
-    'Tandoori Chicken (Half)': '/images/Food Pic/Tandoori Chicken.jpeg',
-  };
-  
-  if (exactMatches[itemName]) {
-    return exactMatches[itemName];
-  }
-  
-  // Smart category-based fallbacks
   const nameLC = itemName.toLowerCase();
   
-  // SOUPS
-  if (nameLC.includes('soup')) return '/images/Food Pic/Sweet Corn Soup.png';
+  // PORTAL IMAGES - Real Bawarchi restaurant photos
+  // butter-chicken-portal.jpg: Rich orange/red curry with creamy sauce - BUTTER CHICKEN
+  if (nameLC.includes('butter chicken')) return '/images/Food Pic/butter-chicken-portal.jpg';
   
-  // BREADS & NAANS
-  if (nameLC.includes('naan')) return '/images/Food Pic/Garlic Naan.png';
-  if (nameLC.includes('roti') || nameLC.includes('kulcha')) return '/images/Food Pic/Garlic Naan.png';
+  // paneer-butter-real.jpg: Creamy cheese curry - PANEER BUTTER MASALA & similar paneer curries
+  if (nameLC.includes('paneer butter masala')) return '/images/Food Pic/paneer-butter-real.jpg';
+  if (nameLC.includes('paneer') && nameLC.includes('creamy')) return '/images/Food Pic/paneer-butter-real.jpg';
   
-  // DOSAS & IDLI
-  if (nameLC.includes('dosa') || nameLC.includes('uthappam')) return '/images/Food Pic/dosa.jpg';
-  if (nameLC.includes('idli') || nameLC.includes('vada')) return '/images/Food Pic/idli.jpg';
+  // biryani-portal.jpg: Rice biryani dish - ALL BIRYANI VARIANTS
+  if (nameLC.includes('biryani') || nameLC.includes('pulav')) return '/images/Food Pic/biryani-portal.jpg';
   
-  // RICE & PULAV
-  if (nameLC.includes('rice') || nameLC.includes('pulav')) return '/images/Food Pic/rice.jpg';
+  // tandoori-chicken-portal.jpg: Tandoori roasted chicken - TANDOORI items
+  if (nameLC.includes('tandoori') && nameLC.includes('chicken')) return '/images/Food Pic/tandoori-chicken-portal.jpg';
+  if (nameLC.includes('tandoori') && nameLC.includes('half')) return '/images/Food Pic/tandoori-chicken-portal.jpg';
+  if (nameLC.includes('tandoori') && nameLC.includes('full')) return '/images/Food Pic/tandoori-chicken-portal.jpg';
   
-  // NOODLES - VEG & NON-VEG
-  if (nameLC.includes('hakka noodle') || nameLC.includes('schezwan noodle')) 
+  // chicken-tikka-portal.jpg: Tandoori grilled chicken pieces - TIKKA items
+  if (nameLC.includes('tikka')) return '/images/Food Pic/chicken-tikka-portal.jpg';
+  
+  // samosa-portal.jpg: Golden fried pastry - SAMOSA & similar fried appetizers
+  if (nameLC.includes('samosa')) return '/images/Food Pic/samosa-portal.jpg';
+  
+  // NAMED DISHES FROM BAWARCHI - High quality PNG images with exact names
+  if (nameLC.includes('panner butter masala') || nameLC.includes('paneer butter masala')) 
+    return '/images/Food Pic/Panner Butter Masala.png';
+  if (nameLC.includes('hyd chicken') || nameLC.includes('hyderabad chicken dum'))
+    return '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg';
+  if (nameLC.includes('tandoori chicken') && !nameLC.includes('(half)') && !nameLC.includes('(full)') && !nameLC.includes('tikka'))
+    return '/images/Food Pic/Tandoori Chicken.jpeg';
+  if (nameLC.includes('chicken lollipop') && !nameLC.includes('masala'))
+    return '/images/Food Pic/Chicken Lollipops.jpeg';
+  if (nameLC.includes('masala lollipop') || (nameLC.includes('lollipop') && nameLC.includes('masala')))
+    return '/images/Food Pic/Masala Lollipops (Chicken).png';
+  if (nameLC.includes('guthi vankay') || nameLC.includes('gutti vankay'))
+    return '/images/Food Pic/Guthi Vankaya Biryani.png';
+  if (nameLC.includes('tandoori pomfret') || (nameLC.includes('pomfret') && nameLC.includes('tandoori')))
+    return '/images/Food Pic/Tandoori Pomfret.png';
+  if (nameLC.includes('sweet corn soup') || (nameLC.includes('corn') && nameLC.includes('soup')))
+    return '/images/Food Pic/Sweet Corn Soup.png';
+  if (nameLC.includes('gobi 65') || (nameLC.includes('gobi') && nameLC.includes('65')))
+    return '/images/Food Pic/Gobi 65.png';
+  if (nameLC.includes('garlic naan'))
+    return '/images/Food Pic/Garlic Naan.png';
+  if (nameLC.includes('veg fried rice') || (nameLC.includes('vegetable') && nameLC.includes('fried rice')))
+    return '/images/Food Pic/Veg Fried Rice.png';
+  if (nameLC.includes('veg machurian') && !nameLC.includes('wet'))
+    return '/images/Food Pic/Veg Machurian.png';
+  if (nameLC.includes('manchurian') && nameLC.includes('wet'))
+    return '/images/Food Pic/Veg Manchurian Wet.png';
+  if (nameLC.includes('veg schezwan') || (nameLC.includes('schezwan') && nameLC.includes('noodle')))
     return '/images/Food Pic/Veg Schezwan Noodles.png';
-  if (nameLC.includes('noodle')) return '/images/Food Pic/Veg Schezwan Noodles.png';
   
-  // FRIED RICE - VEG & NON-VEG
-  if (nameLC.includes('fried rice')) return '/images/Food Pic/Veg Fried Rice.png';
-  
-  // MANCHURIAN
-  if (nameLC.includes('manchurian')) return '/images/Food Pic/Veg Manchurian Wet.png';
-  
+  // CATEGORY-BASED FALLBACKS - Generic images for categories
   // BREADS
-  if (nameLC.includes('bread')) return '/images/Food Pic/Garlic Naan.png';
+  if (nameLC.includes('naan') || nameLC.includes('roti') || nameLC.includes('kulcha') || nameLC.includes('paratha'))
+    return '/images/Food Pic/naan.jpg';
   
-  // DESSERTS - Specific images
-  if (nameLC.includes('gulab jamun')) return '/images/Food Pic/gulab-jamun.jpg';
-  if (nameLC.includes('rasmalai')) return '/images/Food Pic/rasmalai.jpg';
-  if (nameLC.includes('kulfi')) return '/images/Food Pic/kulfi.jpg';
-  if (nameLC.includes('ice cream')) return '/images/Food Pic/ice-cream.jpg';
-  if (nameLC.includes('dessert')) return '/images/Food Pic/gulab-jamun.jpg';
+  // DOSAS & SOUTH INDIAN
+  if (nameLC.includes('dosa') || nameLC.includes('uthappam') || nameLC.includes('masala dosa'))
+    return '/images/Food Pic/dosa.jpg';
+  if (nameLC.includes('idli') || nameLC.includes('vada'))
+    return '/images/Food Pic/idli.jpg';
   
-  // BEVERAGES
-  if (nameLC.includes('chai') || nameLC.includes('tea')) return '/images/Food Pic/chai.jpg';
-  if (nameLC.includes('lassi') || nameLC.includes('shake')) return '/images/Food Pic/lassi.jpg';
-  if (nameLC.includes('mango shake') || nameLC.includes('falooda')) return '/images/Food Pic/mango-shake.jpg';
+  // RICE & RICE DISHES
+  if (nameLC.includes('fried rice') || nameLC.includes('fried rice'))
+    return '/images/Food Pic/fried-rice.jpg';
+  if (nameLC.includes('rice') || nameLC.includes('plain rice'))
+    return '/images/Food Pic/rice.jpg';
   
-  // APPETIZERS - VEG
-  if (nameLC.includes('samosa')) return '/images/Food Pic/samosa.jpg';
-  if (nameLC.includes('pakoda') || nameLC.includes('pakora')) return '/images/Food Pic/pakoda.jpg';
-  if (nameLC.includes('paneer tikka')) return '/images/Food Pic/paneer-tikka.jpg';
-  if (nameLC.includes('gobi') && nameLC.includes('65')) return '/images/Food Pic/Gobi 65.png';
-  if (nameLC.includes('gobi') || nameLC.includes('cauliflower')) return '/images/Food Pic/Veg Machurian.png';
-  if (nameLC.includes('corn')) return '/images/Food Pic/pakoda.jpg';
+  // CURRIES - Match by base ingredient
+  // Chicken curries
+  if (nameLC.includes('chicken 65') || nameLC.includes('chicken 555'))
+    return '/images/Food Pic/chicken-65.jpg';
+  if (nameLC.includes('chicken') && (nameLC.includes('curry') || nameLC.includes('masala') || nameLC.includes('korma') || nameLC.includes('kotha')))
+    return '/images/Food Pic/chicken-curry.jpg';
+  if (nameLC.includes('chicken'))
+    return '/images/Food Pic/chicken-curry.jpg';
   
-  // CHICKEN - Specific
-  if (nameLC.includes('butter chicken')) return '/images/Food Pic/butter-chicken.jpg';
-  if (nameLC.includes('chicken 65')) return '/images/Food Pic/chicken-65.jpg';
-  if (nameLC.includes('chicken tikka masala') || nameLC.includes('tikka masala')) return '/images/Food Pic/chicken-masala.jpg';
-  if (nameLC.includes('chicken tikka')) return '/images/Food Pic/chicken-tikka.jpg';
-  if (nameLC.includes('tandoori chicken')) return '/images/Food Pic/Tandoori Chicken.jpeg';
-  if (nameLC.includes('lollipop')) return '/images/Food Pic/Chicken Lollipops.jpeg';
+  // Paneer & Vegetarian
+  if (nameLC.includes('paneer') || nameLC.includes('cottage cheese'))
+    return '/images/Food Pic/paneer-curry.jpg';
+  if (nameLC.includes('dal') || nameLC.includes('dhal') || nameLC.includes('lentil'))
+    return '/images/Food Pic/dal-makhani.jpg';
+  if (nameLC.includes('vegetable') || nameLC.includes('veg') || nameLC.includes('mixed veg'))
+    return '/images/Food Pic/veg-curry.jpg';
   
-  // GENERAL CHICKEN CURRIES
-  if (nameLC.includes('chicken')) return '/images/Food Pic/chicken-curry.jpg';
-  
-  // PANEER CURRIES
-  if (nameLC.includes('paneer')) return '/images/Food Pic/Panner Butter Masala.png';
-  
-  // DAL & LENTILS
-  if (nameLC.includes('dal') || nameLC.includes('dhal')) return '/images/Food Pic/dal-makhani.jpg';
-  
-  // VEG CURRIES
-  if (nameLC.includes('veg') || nameLC.includes('vegetable')) return '/images/Food Pic/veg-curry.jpg';
-  
-  // FISH & SEAFOOD
-  if (nameLC.includes('fish') || nameLC.includes('pomfret') || nameLC.includes('apollo')) 
-    return '/images/Food Pic/fish-curry.jpg';
-  if (nameLC.includes('shrimp') || nameLC.includes('prawn') || nameLC.includes('royyala')) 
-    return '/images/Food Pic/shrimp-curry.jpg';
-  
-  // MUTTON / GOAT
+  // Mutton/Goat/Lamb
   if (nameLC.includes('mutton') || nameLC.includes('goat') || nameLC.includes('lamb') || nameLC.includes('nalli'))
     return '/images/Food Pic/mutton-curry.jpg';
   
-  // BIRYANI
-  if (nameLC.includes('biryani')) return '/images/Food Pic/biryani.jpg';
-  if (nameLC.includes('pulav')) return '/images/Food Pic/pulav.jpg';
+  // SEAFOOD
+  if (nameLC.includes('fish') || nameLC.includes('pomfret') || nameLC.includes('apollo'))
+    return '/images/Food Pic/fish-curry.jpg';
+  if (nameLC.includes('shrimp') || nameLC.includes('prawn') || nameLC.includes('royyala'))
+    return '/images/Food Pic/shrimp-curry.jpg';
   
   // EGG
   if (nameLC.includes('egg')) return '/images/Food Pic/egg-curry.jpg';
   
-  // DEFAULT
+  // NOODLES
+  if (nameLC.includes('noodle') || nameLC.includes('schezwan'))
+    return '/images/Food Pic/Veg Schezwan Noodles.png';
+  
+  // DESSERTS
+  if (nameLC.includes('gulab jamun')) return '/images/Food Pic/gulab-jamun.jpg';
+  if (nameLC.includes('rasmalai')) return '/images/Food Pic/rasmalai.jpg';
+  if (nameLC.includes('kulfi')) return '/images/Food Pic/kulfi.jpg';
+  if (nameLC.includes('ice cream')) return '/images/Food Pic/ice-cream.jpg';
+  
+  // BEVERAGES
+  if (nameLC.includes('chai') || nameLC.includes('tea')) return '/images/Food Pic/chai.jpg';
+  if (nameLC.includes('lassi')) return '/images/Food Pic/lassi.jpg';
+  if (nameLC.includes('mango shake') || nameLC.includes('falooda') || nameLC.includes('shake'))
+    return '/images/Food Pic/mango-shake.jpg';
+  
+  // APPETIZERS - Generic fallbacks
+  if (nameLC.includes('pakoda') || nameLC.includes('pakora'))
+    return '/images/Food Pic/pakoda.jpg';
+  
+  // DEFAULT - Use Hero Shot for anything else
   return '/images/Food Pic/Hero Shot.png';
 };
 
