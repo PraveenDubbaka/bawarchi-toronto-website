@@ -1,60 +1,77 @@
 import { motion } from 'framer-motion';
 import { ChefHat, Flame, Leaf } from 'lucide-react';
 
-// Image mapping for menu items
+// Image mapping for menu items - Intelligent mapping with proper categorization
 const getMenuItemImage = (itemName: string): string => {
   const imageMap: { [key: string]: string } = {
-    // Biryanis & Pulavs
+    // ==================== BIRYANIS & PULAVS ====================
+    // Chicken Biryanis - use chicken biryani image
     'Hyderabadi Chicken Dum Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
-    'Hyderabadi Goat Dum Biryani': '/images/Food Pic/mutton-biryani.jpg',
     'Boneless Chicken Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    'Gongura Chicken Dum Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    'Chicken Ghee Roast Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    'Ulavacharu Chicken Dum Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    'Vijaywada Spl. Bnls. Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
+    
+    // Mutton/Goat Biryanis - use mutton biryani image
+    'Hyderabadi Goat Dum Biryani': '/images/Food Pic/mutton-biryani.jpg',
     'Boneless Mutton Biryani': '/images/Food Pic/mutton-biryani.jpg',
-    'Gongura Chicken Dum Biryani': '/images/Food Pic/biryani.jpg',
     'Gongura Mutton Dum Biryani': '/images/Food Pic/mutton-biryani.jpg',
-    'Chicken Ghee Roast Biryani': '/images/ghee-roast-biryani.jpg',
     'Mutton Ghee Roast Biryani': '/images/Food Pic/mutton-biryani.jpg',
-    'Nalli Gosht Biryani': '/images/nalli-biryani.jpg',
+    'Nalli Gosht Biryani': '/images/Food Pic/mutton-biryani.jpg',
+    
+    // Vegetarian Biryanis
     'Hyderabadi Veg Dum Biryani': '/images/Food Pic/Guthi Vankaya Biryani.png',
     'Paneer Biryani': '/images/paneer-biryani.jpg',
     'Paneer Ghee Roast Biryani': '/images/paneer-biryani.jpg',
-    'Egg Biryani': '/images/Food Pic/egg-curry.jpg',
-    'Vijaywada Spl. Bnls. Biryani': '/images/Food Pic/biryani.jpg',
-    'Ulavacharu Chicken Dum Biryani': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
-    'Shirmp Biryani': '/images/Food Pic/shrimp-dish.jpg',
-    'Fish Biryani': '/images/Food Pic/fish-dish.jpg',
+    'Egg Biryani': '/images/Food Pic/biryani.jpg',
     
-    // Appetizers (Veg)
+    // Seafood Biryanis
+    'Shirmp Biryani': '/images/Food Pic/shrimp-curry.jpg',
+    'Fish Biryani': '/images/Food Pic/fish-curry.jpg',
+    
+    // ==================== APPETIZERS (VEGETARIAN) ====================
     'Vegetable Samosa {2}': '/images/Food Pic/samosa.jpg',
     'Mix Veg Pakoda': '/images/Food Pic/pakoda.jpg',
     'Chilli Idli': '/images/Food Pic/idli.jpg',
     'Gobi Manchurian': '/images/Food Pic/Veg Machurian.png',
     'Gobi 65 Dry / Wet': '/images/Food Pic/Gobi 65.png',
-    'Chilli Paneer': '/images/Food Pic/paneer-curry.jpg',
+    'Chilli Paneer': '/images/Food Pic/paneer-tikka.jpg',
     'Paneer 65 Dry / Wet': '/images/Food Pic/paneer-tikka.jpg',
     'Paneer Tikka Kabab': '/images/Food Pic/paneer-tikka.jpg',
     'Crispy Corn': '/images/Food Pic/pakoda.jpg',
     'Karampodi Gobi': '/images/Food Pic/Gobi 65.png',
     
-    // Appetizers (Non-Veg)
+    // ==================== APPETIZERS (NON-VEG) ====================
+    // Chicken appetizers
     'Chicken 65 Dry / Wet': '/images/Food Pic/chicken-65.jpg',
     'Chicken Lollipops (Dry) {4}': '/images/Food Pic/Chicken Lollipops.jpeg',
-    'Chilli Chicken': '/images/Food Pic/chicken-fry.jpg',
-    'Chicken Manchurian': '/images/Food Pic/chicken-curry.jpg',
+    'Chilli Chicken': '/images/Food Pic/chicken-65.jpg',
+    'Chicken Manchurian': '/images/Food Pic/chicken-65.jpg',
     'Chicken 555': '/images/Food Pic/chicken-65.jpg',
-    'Chicken Majestic': '/images/Food Pic/chicken-masala.jpg',
-    'Chicken Ghee Roast': '/images/Food Pic/chicken-fry.jpg',
-    'Chicken Pepper Fry': '/images/Food Pic/chicken-fry.jpg',
+    'Chicken Majestic': '/images/Food Pic/chicken-tikka.jpg',
+    'Chicken Ghee Roast': '/images/Food Pic/chicken-tikka.jpg',
+    'Chicken Pepper Fry': '/images/Food Pic/chicken-65.jpg',
     'Karampodi Kodi (Chicken)': '/images/Food Pic/chicken-65.jpg',
-    'Kaju Kodi Fry': '/images/Food Pic/chicken-fry.jpg',
+    'Kaju Kodi Fry': '/images/Food Pic/chicken-tikka.jpg',
+    'Chicken Pakoda': '/images/Food Pic/pakoda.jpg',
+    'Boneless Chicken Pakoda': '/images/Food Pic/pakoda.jpg',
+    'Chicken Tikka Kabab': '/images/Food Pic/chicken-tikka.jpg',
+    'Tandoori Chicken (Half)': '/images/Food Pic/Tandoori Chicken.jpeg',
+    
+    // Mutton appetizers
     'Mutton Pepper Fry (Bone-In)': '/images/Food Pic/mutton-curry.jpg',
     'Mutton Roast (Boneless)': '/images/Food Pic/mutton-curry.jpg',
     'Mutton Ghee Roast (Boneless)': '/images/Food Pic/mutton-curry.jpg',
-    'Apollo Fish': '/images/fish-fry.jpg',
-    'Chilli Fish': '/images/Food Pic/fish-dish.jpg',
-    'Tandoori Chicken (Half)': '/images/Food Pic/Tandoori Chicken.jpeg',
-    'Tandoori Pomfret (Fish)': '/images/Food Pic/Tandoori Pomfret.png',
+    'Mutton Seekh Kabab': '/images/Food Pic/tandoori-kebab.jpg',
     
-    // Vegetarian Curries
+    // Fish & Seafood appetizers
+    'Apollo Fish': '/images/fish-fry.jpg',
+    'Chilli Fish': '/images/Food Pic/fish-curry.jpg',
+    'Tandoori Pomfret (Fish)': '/images/Food Pic/Tandoori Pomfret.png',
+    'Chicken Seekh Kabab': '/images/Food Pic/tandoori-kebab.jpg',
+    
+    // ==================== VEGETARIAN CURRIES ====================
     'Paneer Butter Masala': '/images/Food Pic/Panner Butter Masala.png',
     'Paneer Tikka Masala': '/images/Food Pic/paneer-curry.jpg',
     'Kadai Paneer': '/images/Food Pic/paneer-curry.jpg',
@@ -69,7 +86,7 @@ const getMenuItemImage = (itemName: string): string => {
     'Mix Veg Curry': '/images/Food Pic/veg-curry.jpg',
     'Bagara Baingan': '/images/Food Pic/Guthi Vankaya Biryani.png',
     
-    // Chicken Curries
+    // ==================== CHICKEN CURRIES ====================
     'Butter Chicken': '/images/Food Pic/butter-chicken.jpg',
     'Chicken Tikka Masala': '/images/Food Pic/chicken-masala.jpg',
     'Kadai Chicken': '/images/Food Pic/chicken-curry.jpg',
@@ -78,12 +95,12 @@ const getMenuItemImage = (itemName: string): string => {
     'Chicken Vindaloo': '/images/Food Pic/chicken-curry.jpg',
     'Andhra Chicken Curry': '/images/Food Pic/chicken-curry.jpg',
     'Gongura Chicken': '/images/Food Pic/chicken-curry.jpg',
-    'Chicken Chettinad': '/images/Food Pic/chicken-masala.jpg',
+    'Chicken Chettinad': '/images/Food Pic/chicken-curry.jpg',
     'Natu Kodi Pulusu': '/images/Food Pic/chicken-curry.jpg',
     'Ulavacharu Chicken': '/images/Food Pic/chicken-curry.jpg',
     'Chicken Saag': '/images/Food Pic/chicken-curry.jpg',
     
-    // Mutton/Goat Curries
+    // ==================== MUTTON/GOAT CURRIES ====================
     'Goat Curry': '/images/Food Pic/mutton-curry.jpg',
     'Mutton Rogan Josh': '/images/Food Pic/mutton-curry.jpg',
     'Goat Korma': '/images/Food Pic/mutton-curry.jpg',
@@ -98,7 +115,7 @@ const getMenuItemImage = (itemName: string): string => {
     'Lamb Korma': '/images/Food Pic/mutton-curry.jpg',
     'Lamb Saag': '/images/Food Pic/mutton-curry.jpg',
     
-    // Dosas & South Indian
+    // ==================== DOSAS & SOUTH INDIAN ====================
     'Plain Dosa': '/images/Food Pic/dosa.jpg',
     'Masala Dosa': '/images/Food Pic/masala-dosa.jpg',
     'Mysore Masala Dosa': '/images/Food Pic/masala-dosa.jpg',
@@ -112,8 +129,8 @@ const getMenuItemImage = (itemName: string): string => {
     'Onion Uthappam': '/images/Food Pic/uthappam.jpg',
     'Mix Veg Uthappam': '/images/Food Pic/uthappam.jpg',
     
-    // Indo Chinese
-    'Veg Hakka Noodles': '/images/Food Pic/noodles.jpg',
+    // ==================== INDO CHINESE ====================
+    'Veg Hakka Noodles': '/images/Food Pic/Veg Schezwan Noodles.png',
     'Chicken Hakka Noodles': '/images/Food Pic/noodles.jpg',
     'Shrimp Hakka Noodles': '/images/Food Pic/noodles.jpg',
     'Veg Fried Rice': '/images/Food Pic/Veg Fried Rice.png',
@@ -121,17 +138,17 @@ const getMenuItemImage = (itemName: string): string => {
     'Shrimp Fried Rice': '/images/Food Pic/fried-rice.jpg',
     'Chicken Schezwan Fried Rice': '/images/Food Pic/fried-rice.jpg',
     'Veg Manchurian (Wet)': '/images/Food Pic/Veg Manchurian Wet.png',
-    'Chicken Manchurian (Wet)': '/images/Food Pic/chicken-curry.jpg',
+    'Chicken Manchurian (Wet)': '/images/Food Pic/Veg Manchurian Wet.png',
     
-    // Seafood
+    // ==================== SEAFOOD ====================
     'Fish Masala': '/images/Food Pic/fish-curry.jpg',
     'Fish Chettinadu Curry': '/images/Food Pic/fish-curry.jpg',
-    'Fish Pulusu': '/images/Food Pic/fish-dish.jpg',
+    'Fish Pulusu': '/images/Food Pic/fish-curry.jpg',
     'Shrimp Iguru': '/images/Food Pic/shrimp-curry.jpg',
     'Amaravati Royyala Kura': '/images/Food Pic/shrimp-curry.jpg',
-    'Chilli Shrimp': '/images/Food Pic/shrimp-dish.jpg',
+    'Chilli Shrimp': '/images/Food Pic/shrimp-curry.jpg',
     
-    // Breads & Sides
+    // ==================== BREADS & SIDES ====================
     'Plain Naan': '/images/Food Pic/naan.jpg',
     'Butter Naan': '/images/Food Pic/naan.jpg',
     'Garlic Naan': '/images/Food Pic/Garlic Naan.png',
@@ -144,7 +161,7 @@ const getMenuItemImage = (itemName: string): string => {
     'Raita / Salan': '/images/Food Pic/lassi.jpg',
     'Onion Salad': '/images/Food Pic/samosa.jpg',
     
-    // Desserts & Beverages
+    // ==================== DESSERTS & BEVERAGES ====================
     'Gulab Jamun': '/images/Food Pic/gulab-jamun.jpg',
     'Rasmalai': '/images/Food Pic/rasmalai.jpg',
     'Mango Lassi': '/images/Food Pic/lassi.jpg',
@@ -155,18 +172,18 @@ const getMenuItemImage = (itemName: string): string => {
     'Ice Cream Double Scoop': '/images/Food Pic/ice-cream.jpg',
     'Matka Kulfi': '/images/Food Pic/kulfi.jpg',
     
-    // Weekend Specials
+    // ==================== WEEKEND SPECIALS ====================
     'Natukodi Fry Biryani': '/images/Food Pic/biryani.jpg',
     'Gongura Goat Fry Biryani': '/images/Food Pic/mutton-biryani.jpg',
-    'Rajugari Royyala Fry Biryani': '/images/Food Pic/shrimp-dish.jpg',
+    'Rajugari Royyala Fry Biryani': '/images/Food Pic/shrimp-curry.jpg',
     'Nalli Gosht Pulav': '/images/Food Pic/pulav.jpg',
     'Dosa with Chicken Curry': '/images/Food Pic/masala-dosa.jpg',
     'Dosa with Goat Curry': '/images/Food Pic/masala-dosa.jpg',
-    'Natukodi (Country Chicken) Fry': '/images/Food Pic/chicken-fry.jpg',
+    'Natukodi (Country Chicken) Fry': '/images/Food Pic/chicken-65.jpg',
     'Gongura Mutton Fry': '/images/Food Pic/mutton-curry.jpg',
-    'Royyala Vepudu (Shrimp Fry)': '/images/Food Pic/shrimp-dish.jpg',
+    'Royyala Vepudu (Shrimp Fry)': '/images/Food Pic/shrimp-curry.jpg',
     
-    // Lunch Specials
+    // ==================== LUNCH SPECIALS ====================
     'Paneer Tikka Combo': '/images/Food Pic/paneer-tikka.jpg',
     'Chole Masala Combo': '/images/Food Pic/veg-curry.jpg',
     'Dal Makhani Combo': '/images/Food Pic/dal-makhani.jpg',
@@ -176,8 +193,8 @@ const getMenuItemImage = (itemName: string): string => {
     'Veg Biryani Combo': '/images/Food Pic/Guthi Vankaya Biryani.png',
     'Chicken Biryani Combo': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
     'Goat Biryani Combo': '/images/Food Pic/mutton-biryani.jpg',
-    'Veg Thali': '/images/Food Pic/Hero Shot.png',
-    'Non-Veg Thali': '/images/Food Pic/Hero Shot.png',
+    'Veg Thali': '/images/Food Pic/Guthi Vankaya Biryani.png',
+    'Non-Veg Thali': '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg',
   };
   
   return imageMap[itemName] || '/images/Food Pic/Hero Shot.png';
