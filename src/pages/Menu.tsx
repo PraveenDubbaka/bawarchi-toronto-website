@@ -1,17 +1,23 @@
 import { motion } from 'framer-motion';
 import { ChefHat, Flame, Leaf } from 'lucide-react';
 
-// Intelligent image mapping based on actual visual content
+// Intelligent image mapping with real food images
 const getMenuItemImage = (itemName: string): string => {
   const nameLC = itemName.toLowerCase();
   
-  // EXACT MATCHES - Named dishes with specific images
+  // EXACT MATCHES - Real food photos
+  if (nameLC === 'butter chicken' || nameLC.includes('butter chicken'))
+    return '/images/Food Pic/butter-chicken-real.jpg';
   if (nameLC === 'paneer butter masala' || nameLC === 'panner butter masala') 
-    return '/images/Food Pic/Panner Butter Masala.png';
+    return '/images/Food Pic/paneer-butter-masala-real.jpg';
   if (nameLC.includes('hyderabadi chicken dum biryani'))
-    return '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg';
+    return '/images/Food Pic/hyderabadi-chicken-dum-biryani.jpg';
   if (nameLC === 'tandoori chicken (half)' || nameLC === 'tandoori chicken (full)')
-    return '/images/Food Pic/Tandoori Chicken.jpeg';
+    return '/images/Food Pic/tandoori-chicken-real.jpg';
+  if (nameLC.includes('chicken tikka'))
+    return '/images/Food Pic/chicken-tikka-real.jpg';
+  
+  // HIGH QUALITY PNG/JPEG IMAGES  
   if (nameLC.includes('chicken lollipops (dry)'))
     return '/images/Food Pic/Chicken Lollipops.jpeg';
   if (nameLC.includes('masala lollipops'))
@@ -35,11 +41,11 @@ const getMenuItemImage = (itemName: string): string => {
   if (nameLC.includes('schezwan') && nameLC.includes('noodle'))
     return '/images/Food Pic/Veg Schezwan Noodles.png';
   
-  // CATEGORY-BASED FALLBACKS - Using actual images we have
+  // CATEGORY-BASED FALLBACKS - Using real food photos
   
-  // BIRYANIS & PULAVS - Use the Hyd Chicken Biryani image as fallback
+  // BIRYANIS & PULAVS - Use the real biryani image
   if (nameLC.includes('biryani') || nameLC.includes('pulav'))
-    return '/images/Food Pic/Hyd Chicken Dum Biryani.jpeg';
+    return '/images/Food Pic/hyderabadi-chicken-dum-biryani.jpg';
   
   // BREADS
   if (nameLC.includes('naan') || nameLC.includes('roti') || nameLC.includes('kulcha') || nameLC.includes('paratha'))
@@ -55,7 +61,7 @@ const getMenuItemImage = (itemName: string): string => {
   if (nameLC.includes('samosa')) return '/images/Food Pic/samosa.jpg';
   if (nameLC.includes('pakoda') || nameLC.includes('pakora')) return '/images/Food Pic/pakoda.jpg';
   if (nameLC.includes('tikka') && nameLC.includes('paneer')) return '/images/Food Pic/paneer-tikka.jpg';
-  if (nameLC.includes('tikka')) return '/images/Food Pic/chicken-tikka.jpg';
+  if (nameLC.includes('tikka')) return '/images/Food Pic/chicken-tikka-real.jpg';
   
   // RICE DISHES
   if (nameLC.includes('fried rice'))
@@ -69,17 +75,17 @@ const getMenuItemImage = (itemName: string): string => {
   
   // CHICKEN DISHES
   if (nameLC.includes('butter chicken'))
-    return '/images/Food Pic/butter-chicken.jpg';
+    return '/images/Food Pic/butter-chicken-real.jpg';
   if (nameLC.includes('chicken 65') || nameLC.includes('chicken 555'))
     return '/images/Food Pic/chicken-65.jpg';
   if (nameLC.includes('tandoori') && nameLC.includes('chicken'))
-    return '/images/Food Pic/Tandoori Chicken.jpeg';
+    return '/images/Food Pic/tandoori-chicken-real.jpg';
   if (nameLC.includes('chicken'))
     return '/images/Food Pic/chicken-curry.jpg';
   
   // PANEER & VEGETARIAN CURRIES
   if (nameLC.includes('paneer butter'))
-    return '/images/Food Pic/Panner Butter Masala.png';
+    return '/images/Food Pic/paneer-butter-masala-real.jpg';
   if (nameLC.includes('paneer'))
     return '/images/Food Pic/paneer-curry.jpg';
   if (nameLC.includes('dal') || nameLC.includes('dhal'))
