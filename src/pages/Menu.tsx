@@ -252,9 +252,14 @@ const Menu = () => {
             <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">
               Our <span className="text-gradient">Menu</span>
             </h1>
-            <p className="text-white/60 text-xl max-w-2xl mx-auto">
+            <p className="text-white/60 text-xl max-w-2xl mx-auto mb-8">
               Explore our authentic Indian dishes crafted with traditional recipes and fresh ingredients
             </p>
+            <div className="inline-block glass-morphism px-6 py-3 rounded-lg border border-primary-500/30">
+              <p className="text-primary-400 font-semibold">
+                💡 Dine-in prices shown | Takeout: Add $1.00 per item
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
